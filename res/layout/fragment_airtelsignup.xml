@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mSignUpAirtelView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/signupairteltitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_yellow_header" >
+
+            <!-- tools:ignore="UselessParent" -->
+
+            <ImageView
+                android:id="@+id/signupairtel_HeaderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/header_hike"
+                android:contentDescription="@string/playgame"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/signupairtelView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:id="@+id/mSignUpAirtelMsgText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dip"
+                android:textColor="@color/darkgray"
+                android:textSize="15sp"
+                android:layout_gravity  = "center"
+                android:text="@string/airtelnumber"
+                android:layout_centerHorizontal="true"
+                 />
+            
+              <TextView
+                android:id ="@+id/mSignUpAirtelNumberText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below = "@+id/mSignUpAirtelMsgText"
+                android:layout_marginTop = "2dip"
+                android:text = "@string/Null"
+                android:textColor="@color/orange"
+                android:layout_gravity  = "center"
+                android:textSize="15sp"    
+                android:layout_centerHorizontal="true"          
+                /> 
+                        
+              <TextView
+                android:id="@+id/mSignUpAirtelMsgText_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"               
+                android:layout_marginTop = "2dip"
+                android:textColor="@color/darkgray"
+                android:textSize="15sp"
+                android:layout_gravity  = "center"
+                android:text = "@string/enteryournickname"
+                android:layout_below = "@+id/mSignUpAirtelNumberText"
+                android:layout_centerHorizontal="true"
+                />
+
+            <EditText
+                android:id="@+id/mSignUpAirtelNicknameEditText"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:hint = "@string/hint"
+                android:layout_below="@+id/mSignUpAirtelMsgText_1" 
+                android:layout_marginTop = "20dip"
+                android:layout_marginLeft = "10dip"
+                android:layout_marginRight = "10dip"
+                android:drawableLeft = "@drawable/login_nickname"
+                android:drawablePadding = "10dip"
+                android:maxLength="15"
+                android:textSize = "15sp"
+                android:textColor = "@color/gray"
+                android:background="@drawable/btn_shape_white_rec"/>
+
+            <Button
+                android:id="@+id/mSignUpAirtelNextBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_below = "@+id/mSignUpAirtelNicknameEditText"
+                android:layout_marginTop = "20dip"
+                android:layout_marginLeft = "10dip"
+                android:layout_marginRight = "10dip"
+                android:contentDescription="@string/notice"
+                android:text="@string/letsplay" 
+                android:textSize = "15sp"                
+                android:textColor = "@color/gray"
+                android:clickable="false"/>
+        </RelativeLayout>
+    </LinearLayout>

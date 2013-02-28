@@ -1,0 +1,20 @@
+<article class="page forum forum-addtopic share" data-on-open="home.atCounter" data-at-maxlength="10" data-maxlength="140" data-widget="WebPage" data-animation="fade" data-auto-scroll="disabled" data-page-title="@ Friends or Games" data-page-navi="forum" 
+		data-left-action="goBack" data-tool-class="done-btn" data-tool-action="home.done"
+		data-comment-type="${commentType}" data-subject-id="${subjectId}" data-subject-owner="${subjectOwner}" data-subject-owner-name="${subjectOwnerName}" data-body-content="${bodyContent}" data-url="${url}">
+	<section class="addtopic-form">
+		<textarea class="contents atDesc" name="atDesc" cols="" rows="" maxlength="140" placeholder="@ Friends/Games, Multiple choice for 10 times."></textarea>
+	</section>
+	<div data-widget="TabGroup" class="tabgrp" data-active-tab="0" data-widget-id="gameNotify">
+		<section data-title="@Friends" class="share-list" data-widget="DataView" data-on-scrolldata="home.getMyFriends">
+			<ul class="news-list">
+			</ul>
+		</section>
+		
+		
+		<section data-title="@Games" class="share-list" data-widget="DataView" data-on-scrolldata="home.getAtGames">
+			<ul class="news-list">
+				
+			</ul>
+		</section>
+	</div>
+</article>

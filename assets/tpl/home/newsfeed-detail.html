@@ -1,0 +1,30 @@
+<article class="page notify list" data-widget="WebPage">
+	<ul class="itemlist friend-list">
+		{{each(i, friend) friends}}
+				<li data-widget="Button" data-action="profile.friends" data-user-id="${friend.id}" id="${friend.id}">
+					<div class="wrapper">
+						<img alt="${friend.nickName}" data-stranger-id="${friend.id}" src="${friend.headUrl}" />
+						<div class="info">
+							<div class="name" >${friend.nickName}</div>
+							<div class="mutual" data-stranger-id="${friend.id}" >${mutualFriends[friend.id]} mutual friends</div>
+						</div>
+
+						{{if friend.weight==10}}
+						 <div class="operation" id="view${friend.id}">
+							<input name="view" type="button" data-widget="Button" data-action="profile.friends" data-user-Id="${friend.id}" value="View"/>
+						 </div>
+						{{/if}}
+						
+						{{if friend.weight!=10}}
+						 <div class="operation" id="add${friend.id}">
+							<input name="add" type="button" data-widget="Button" data-action="friend.add" data-user-id="${friend.id}" data-my-Name="${myName}" data-nick-Name="${friend.nickName}" value="Add"/>
+						 </div>
+						 <div class="operation" style="display:none"  id="rsend${friend.id}">
+							<input name="sent" type="button" data-widget="Button" value="Request send" class="weak" />
+						 </div>
+						{{/if}}
+					</div>
+				</li>
+			{{/each}}
+	</ul>
+</article>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<zonesdk.in.android.games.in.widget.ContactLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ContactLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="false" >
+
+   
+
+    <LinearLayout
+        android:id="@+id/invitefriendsView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:focusable="false"
+        android:orientation="vertical"
+        android:visibility="gone" 
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/invitefriends_title"
+            android:layout_width="fill_parent"
+    		android:layout_height="45dp"
+    		android:background="@drawable/header_bg" >
+
+            <!-- tools:ignore="UselessParent" -->
+
+            <ImageView
+                android:id="@+id/invitefriends_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/header_hike"
+                android:contentDescription="@string/playgame"
+              />
+
+            <ImageButton
+                android:id="@+id/invitefriends_left_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="0dip"
+                android:background="@drawable/nav_back"
+                android:contentDescription="@string/notice" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/invitefriends_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:id="@+id/invitefriends_textview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text = "@string/sendinvite"
+                android:textColor="@color/darkgray"
+                android:layout_marginTop = "25dip"  
+                android:textSize = "15dp"            
+                android:layout_centerHorizontal = "true"
+                 />
+              <TextView
+                android:id="@+id/invitefriends_textview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/invitefriends_textview1"
+                android:text = "@string/sendinvite1"
+                android:textColor="@color/darkgray"                          
+                android:layout_centerHorizontal = "true"           
+                android:textSize="15dp"
+                 />
+
+            <Button
+                android:id="@+id/invitefriends_button1"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_below = "@+id/invitefriends_textview2"
+                android:layout_marginLeft = "10dip"
+                android:layout_marginRight = "10dip"
+                android:layout_marginTop = "20dip"
+                android:contentDescription="@string/next"
+                android:text="@string/usecontactlist" 
+                android:textColor="@color/white"
+                android:textSize = "15dp"
+                android:background="@drawable/login_blue_btn"
+                />
+            
+            <Button
+                android:id="@+id/invitefriends_button2"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_below = "@+id/invitefriends_button1"
+                android:layout_marginLeft = "10dip"
+                android:layout_marginRight = "10dip"
+                android:layout_marginTop = "20dip"
+                android:contentDescription="@string/notice"
+                android:text="@string/notnow" 
+                android:textColor="@color/gray"
+                android:textSize = "15dp"               
+                android:background="@drawable/btn_bg_disable"
+                />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+    
+     <LinearLayout
+        android:id="@+id/invitefriendslistView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:focusable="false"
+        android:orientation="vertical"
+        android:visibility="gone" 
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/invitefriends_list_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_yellow_header" >
+
+            <!-- tools:ignore="UselessParent" -->
+
+            <TextView
+                android:id="@+id/invitefriends_list_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent = "true"
+                android:text="@string/invitefriend"
+                android:contentDescription="@string/playgame"
+                android:textSize="22dp"
+                android:textColor="@color/white"
+                />
+
+            <ImageButton
+                android:id="@+id/invitefriends_list_btn_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="0dip"
+                android:background="@drawable/nav_back"
+                android:contentDescription="@string/notice" />
+            
+              <ImageButton
+                android:id="@+id/invitefriends_list_btn_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="0dip"
+                android:visibility="gone"
+                android:background="@drawable/tool_invite"
+                android:contentDescription="@string/notice" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/invitefriends_list_content"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip" 
+            android:visibility="gone"
+            android:background="@color/lightgray">
+            
+             <CheckBox
+                android:id="@+id/invitefriends_list_checkBox"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@drawable/checkbox" 
+                android:button="@null" 
+                android:layout_centerVertical = "true"
+                android:layout_marginLeft="10dip"              
+                android:checked="true" />
+
+            <TextView
+                android:id="@+id/signtext"
+                android:layout_width="wrap_content"
+                android:layout_height="24dip"
+                android:layout_toRightOf = "@+id/invitefriends_list_checkBox"     
+                android:layout_marginTop = "12dip"  
+                android:layout_marginLeft="15dip"
+                android:textColor="@color/gray"
+                android:textSize="15dip"
+                />
+
+        </RelativeLayout>
+        
+                <TextView
+                android:id="@+id/nocontactsfind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop = "25dip"  
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/gray"
+                android:textSize="20sp"
+                android:visibility="gone"               
+                android:text="@string/nocontacts"
+                />
+                
+               <ImageView
+                android:id="@+id/nocontactsfindicon"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:layout_marginTop = "100dp"
+                android:contentDescription="@string/nocontacts"
+                android:src="@drawable/mygames_nogamebg"
+                android:visibility="gone"               
+
+                />
+        
+        
+             <ListView 
+                android:id = "@+id/invitefriends_list"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                ></ListView>
+    </LinearLayout>
+
+</zonesdk.in.android.games.in.widget.ContactLayout>

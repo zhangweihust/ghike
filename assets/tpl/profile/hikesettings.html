@@ -1,0 +1,111 @@
+<article class="page social edit" data-page-title="tab" data-widget="WebPage"  data-on-open="profile.changeLogintype">
+<div data-widget="NativeTab" data-active-tab="0">
+  <section data-title="Setting" >
+		 <ul class="edit-list">
+			<li>
+				<div class="editname">NICKNAME</div>
+				<div class="fullname">
+				  <input data-widget="InputFocus" type="text" name="nickName" id="nickName" maxlength="15" class="edittext personalinfo_nickName" value="${userInfo.nickName}"/>
+				</div>
+			</li>
+			
+		    <li>
+			<div class="editname">FULLNAME</div>
+			<div class="fullname">
+			<input data-widget="InputFocus" type="text" name="firstName" id="firstName" maxlength="30" class="edittext personalinfo_firstName " value="${userInfo.firstName}"/>
+			</div>
+			
+			</li>
+			
+			<li style ="display:none">
+			<p>Last Name</p>
+			<input data-widget="InputFocus" type="text" name="lastName" id="lastName" maxlength="20" class="edittext personalinfo_lastName" value="${userInfo.lastName}"/>
+			</li>
+			
+			<li>
+			
+			<div class="editname">GENDER</div>
+			<div class="fullname">
+			<label>
+			<input type="radio" name="gender" id="male" class="personalinfo_male"   value="0" {{if userInfo.gender==0}}checked{{/if}} />
+			Male</label>
+			<label>
+			<input type="radio" name="gender" id="female" class="personalinfo_female" value="1" {{if userInfo.gender==1}}checked{{/if}} />
+			Female</label>
+			</div>
+			</li>
+			
+			<li>
+			<div class="editname">DATE OF BIRTH</div>
+			<div class="fullname">
+			
+			{{if userInfo.month}}
+			<input data-widget="InputFocus" data-kind="number" type="text" name="month" id="month" maxlength="2" class="personalinfo_month" placeholder="MM" value="${userInfo.month}"/>
+			{{else}}
+			<input data-widget="InputFocus" data-kind="number" type="text" name="month" id="month" maxlength="2" class="personalinfo_month" placeholder="MM" value=""/>
+			{{/if}}
+			{{if userInfo.day}}
+			<input data-widget="InputFocus" data-kind="number" type="text" name="day" id="day" maxlength="2" class="personalinfo_day" placeholder="DD" value="${userInfo.day}"/>
+			{{else}}
+			<input data-widget="InputFocus" data-kind="number" type="text" name="day" id="day" maxlength="2" class="personalinfo_day" placeholder="DD" value=""/>
+			{{/if}}
+			{{if userInfo.year}}
+			
+			<input data-widget="InputFocus" data-kind="number" type="text" name="year" id="year" maxlength="4" class="personalinfo_year" placeholder="YYYY" value="${userInfo.year}"/>
+			{{else}}
+			<input data-widget="InputFocus" data-kind="number" type="text" name="year" id="year" maxlength="4" class="personalinfo_year" placeholder="YYYY" value=""/>
+			{{/if}}
+			
+			</div>
+			</li>
+			<li  style="display:none">
+			<div class="spacer"></div>
+			<p>Mobile Number</p>
+			<input data-widget="InputFocus" type="text" value="${userInfo.mobileNum}" disabled/>
+			<p>Operator</p>
+			<input data-widget="InputFocus" type="text" value="${userInfo.operator}" disabled/>
+			</li>
+		</ul>
+		   <p class="nickerror error"></p>
+	       <p class="firsterror error"></p>
+		   <p class="lasterror error"></p>
+		   <p class="birtherror error"></P>
+	    
+	    <div class="settingbtn">
+           <span class="bluebtn save fullbtn" data-action="profile.personalinfoSubmit" data-widget="Button">Save</span>
+           <span class="graybtn save" data-action="topic.back" data-widget="Button">Cancel</span>
+       </div>
+	</section>
+	 <section data-title="zone coins" class="page payment paymenthome">
+		<div class="personal">
+			<img src="${user.headUrl}" />
+			<div class="personalInfo">
+				<div class="name">${user.nickName}</div>
+				<div class="level hint">${ac.hikeCoin} {{if ac.hikeCoin > 1}}Coins{{else}}Coin{{/if}}</div>
+			</div>
+			<div class="bk0"></div>
+		</div>
+	 	<section class="recharge">
+	 	<div class="content">
+			<!-- <div class="change bk15">*1 Coin = 1 Rupee</div> -->
+			<ul class="nostylelist">
+			{{each(rr, coinRupee) coinRupeeList}}
+			<li><label><input type="radio" name="exchange" {{if rr==0}}checked{{/if}}  value="${coinRupee.rupeeAmount}:${coinRupee.coinAmount}" />${coinRupee.coinAmount} {{if coinRupee.coinAmount > 1}}Coins{{else}}Coin{{/if}}<span class="changed">=<em>${coinRupee.rupeeAmount}</em>{{if coinRupee.rupeeAmount > 1}}Rupees{{else}}Rupee{{/if}}</span></label></li>
+			{{/each}}
+			</ul>
+		</div>
+		<div class="functions">
+			<div class="bk15 shadowtext">Payment method:</div>
+			<div class="bk15"><label><input type="radio" name="paymentMethod" checked /> Carrier Billing</label></div>
+			<div class="bk"><input type="button" class="bluebtn full tokenInput" data-transaction-id="${transactionId}"  data-is-native="${isNative}"  data-return-url="${returnUrl}"  data-recharge-type="${rechargeType}" data-action="payment.goToRecharge" data-widget="Button" data-user-id=${user.id} data-user-name="${user.nickName}" data-user-phone="${user.mobileNum}" data-jsp_token="${jsp_token}"  data-need-pincode="${needpincode}" value="Go to Recharge" />
+			</div>
+			<ul>
+				<li data-action="payment.RechargeDetails">Recharge Records</li>
+				<li data-action="payment.ConsumeDetails">Consume Records</li>
+				<!-- <li>Hike Coins User Guide</li> -->
+			</ul>
+		</div>	
+	 	</section>
+	</section>
+</div>
+</article>

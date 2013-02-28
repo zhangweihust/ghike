@@ -1,0 +1,16 @@
+<article class="page social search" data-page-title="Search Result" data-widget="WebPage" data-page-navi="null" data-tool-class="search-btn" data-tool-action="home.to-search">
+	<section data-title="Activities" data-widget-id="searchView" data-widget="DataView" data-on-scrolldata="profile.getSearchResult" data-max-Age="${maxAge}" data-min-Age="${minAge}" data-gender="${gender}"  data-nick-name="${nickName}" data-search-type="${searchType}"> 
+	    <div class="searchtxt">
+		         {{if nickName}}
+					 <div class="searchbox"><input id="keyword" class="searchKeyword" type="text" value="${nickName}"/><input type="button" data-action="profile.do-standad-search"/>
+				 {{else}}
+					<input id="keyword" class="searchKeyword" type="text" value=""/><input type="button" data-action="profile.do-standad-search"/>
+				 {{/if}}
+	         </div>
+	         <div class="error resultsMsg"></div>
+	         <div class="showresult"></div>
+         </div>    
+		<ul class="friend-list">
+		</ul>
+	 </section>
+</article>   

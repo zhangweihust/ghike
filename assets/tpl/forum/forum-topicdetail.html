@@ -1,0 +1,18 @@
+<article class="page game timeline" data-widget="WebPage" data-page-title="Topic" >
+      <section class="timeline-detail">
+         <div class="arrow"></div>
+         <h1><img  src="${topicuser.headUrl}" class="avata" data-action ='profile.friends' data-user-id="${topicuser.id}" /><span class="name">${topicuser.nickName}</span><aside class="time">${topic.createTimeFam}</aside></h1>
+              <div class="content">
+				<div class="detail" data-widget="TimelineContent">
+					{{html topic.contentStyle }}
+				</div>
+			</div>
+			<div class="legend">
+				<aside class="comment" data-topic-id ="${topic.topicId}" data-reply-to ="" data-reply-name ="" data-topic-name ="${topicuser.nickName}" data-action="topic.replylink" ><span>${topic.replyCount}</span></aside>
+			</div>
+	 </section>   
+     <section data-widget="DataView"  data-topic-id="${topic.topicId}" data-on-scrolldata="topic.replylist"  data-widget-id ="replylist" >
+	 	<ul class="comment-list">
+		</ul>
+	</section>
+</article>

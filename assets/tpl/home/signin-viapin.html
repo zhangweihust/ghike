@@ -1,0 +1,11 @@
+<article class="page home sign" data-widget="WebPage" data-page-title="Login via Custom PIN" data-navigator="xui.goBack">
+	<div class="wrapper">
+		<div class="des">
+			Please input your mobile number and custom PIN to login. <span class="help" data-action="home.helpcustompin">What is Custom PIN?</span>
+		</div>
+		<input class="text" type="tel" placeholder="Mobile Number" required name="phone" id="phone" maxlength="14" value="{{if number}}${number}{{/if}}" />
+		<input class="text" type="password" placeholder="Custom PIN" required name="customPinCode" id="customPinCode" maxlength="16"/>
+		<p class="error"></p>
+		<input class="viapin" type="button" value="Login" data-action="home.doSigninCustomPinCode" data-widget="Button" id="doSignup" name="doSignup"/>
+	</div>
+</article>

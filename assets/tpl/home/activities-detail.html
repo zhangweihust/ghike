@@ -1,0 +1,9 @@
+<article class="page social timeline" data-widget="WebPage" data-page-navi="home" data-page-title="Newsfeed">
+	<section class="timeline-detail">
+		{{html feedHtml}}
+	</section>
+	<section class="active-port" data-widget="DataView" data-widget-id="commentsList" data-on-scrolldata="home.getComments" data-subject-id="${subjectId}" data-subject-owner="${subjectOwner}">
+		<ul class="comment-list">
+		</ul>
+	</section>
+</article>

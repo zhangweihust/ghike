@@ -1,0 +1,11 @@
+<article class="page home sign" data-widget="WebPage" data-page-title="Sign up" data-on-open="home.verifycodeControl" data-tool-class="ask-btn" data-tool-action="home.help">
+	<div class="wrapper">
+		<div class="des">Please input your mobile number and tap "Get Code". The verification code will be sent to this number in seconds.</div>
+		<input class="text" type="tel" placeholder="Mobile Number" required maxlength="14" name="phone" id="phone" value="{{if number}}${number}{{/if}}" />
+		<input class="text" type="password" placeholder="Enter Verification Code" required maxlength="4" name="pincode" id="pincode" />
+		<span class="getcode"><input type="button" value="Get Code" data-widget="Button" name="getcode" class="getCode" data-action="home.getCode" data-code-type="SIGNUP_CODE" /></span>
+		<p class="error"></p>
+		<input type="button" value="Sign up" id="doSignup" name="doSignup" data-action="home.doSignup" data-widget="Button"/>
+		<div class="switch" data-action="home.openSignInForm">Already a member? <em>Login now &gt;</em></div>
+	</div>
+</article>

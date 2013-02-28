@@ -1,0 +1,34 @@
+<li data-newsfeed-id="newsfeed_${feed.data.id[0]}">
+	<h2>
+	{{if feed.data.visitType[0] == "newsfeed" || feed.data.userID[0] != feed.data.fID[0]}}
+	<span class="name" data-action="profile.friends" data-user-id="${feed.data.fID[0]}">${feed.data.fName[0]}</span>
+	{{else}}
+	<span class="name">${feed.data.fName[0]}</span>
+	{{/if}}
+	<aside class="time" data-feed-time="${feed.data.time[0]}">${feed.data.timeStr[0]}</aside></h2>
+	<div class="content">
+		{{if feed.data.visitType[0] == "newsfeed" || feed.data.userID[0] != feed.data.fID[0]}}
+			<img data-action="profile.friends" data-user-id="${feed.data.fID[0]}" class="avata" src="${feed.data.heardUrl[0]}"/>
+		{{else}}
+			<img class="avata" src="${feed.data.heardUrl[0]}"/>
+		{{/if}}
+		<div class="detail">
+			{{if feed.data.visitType[0] == "newsfeed" || feed.data.userID[0] != feed.data.fID[0]}}
+			<span class="name" data-action="profile.friends" data-user-id="${feed.data.fID[0]}">${feed.data.fName[0]}</span>
+			{{else}}
+			<span class="name">${feed.data.fName[0]}</span>
+			{{/if}} invited
+			{{if feed.data.fTargetName.length < 2}} 
+				<span class="name" data-action="profile.friends" data-user-id="${feed.data.fTargetId[0]}">${feed.data.fTargetName[0]}</span>
+			{{else}}
+				{{if feed.data.fTargetName.length == 2}} 
+					<span class="name" data-action="profile.friends" data-user-id="${feed.data.fTargetId[0]}">${feed.data.fTargetName[0]}</span> and <span class="name" data-action="profile.friends" data-user-id="${feed.data.fTargetId[1]}">${feed.data.fTargetName[1]}</span> 
+				{{else}}
+					<span class="name" data-action="profile.friends" data-user-id="${feed.data.fTargetId[0]}">${feed.data.fTargetName[0]}</span> and 
+					<span class="name" data-action="home.n_others_detail" data-game-id="${feed.data.fGameId[0]}" data-game-name="${feed.data.fGameName[0]}" data-pids="{{each(index, targetId) feed.data.fTargetId}}{{if index != 0}}${feed.data.fTargetId[index]}{{if feed.data.fTargetId.length != index+1}}_{{/if}}{{/if}}{{/each}}"> ${feed.data.fTargetName.length-1} others</span>
+				{{/if}}
+			{{/if}}
+	 		to play <span class="gamename" data-action="games.openDetail" data-game-id="${feed.data.fGameId[0]}">${feed.data.fGameName[0]}</span>.
+		</div>
+	</div>
+</li>

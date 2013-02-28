@@ -1,0 +1,18 @@
+<article class="page social search" data-page-title="Search" data-widget="WebPage" data-page-navi="null">
+		<section data-title="Activities" data-widget="DataView" data-on-scrolldata="friend.peopleyouMayknow">
+		<div class="searchtxt">
+		    <div class="searchbox">
+		         {{if nickName}}
+					<input id="keyword" class="searchKeyword" type="text" value="${nickName}"/><input type="button" data-action="profile.to-search-results"/>
+				 {{else}}
+					<input id="keyword" class="searchKeyword" type="text" value=""/><input type="button" data-action="profile.to-search-results"/>
+				 {{/if}}
+	         </div>
+	         <div class="error searchMsg"></div>
+		</div>
+		<!-- <div class="subtitle split" data-action="profile.contact">Search via Mobile contact list<span class="arrow"></span></div> -->
+		<div class="subtitle split">Suggested friends</div>  
+		<ul class="friend-list">
+		</ul>
+	</section>
+</article>

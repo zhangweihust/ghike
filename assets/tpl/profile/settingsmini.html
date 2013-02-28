@@ -1,0 +1,123 @@
+<article class="page profile settings" data-widget="WebPage" data-page-title="Settings" data-on-open="profile.changeLogintype">
+	<section class="notifications">
+		<div class="title">Personal info</div>
+		<div class="content">
+			<p>
+				<span class="personalprompt">You can change your account info such as name, gender, date of birth in <span data-action="profile.personalinfo">Editing Personal info.</span></span>
+			</p>
+		</div>
+	</section>
+	<section class="privacy">
+		<div class="title">Privacy</div>
+			<p>
+				{{if userSetting.personalInfo==0}}
+					<select class="personalInfoSelect feedback_fbType">
+						<option value ="0" selected="true">Personal Info - Public</option>
+						<option value ="1">Personal Info - Friends</option>
+						<option value ="2">Personal Info - Me</option>
+					</select>
+				{{else userSetting.personalInfo==1}}
+					<select class="personalInfoSelect feedback_fbType">
+						<option value ="0">Personal Info - Public</option>
+						<option value ="1" selected="true">Personal Info - Friends</option>
+						<option value ="2">Personal Info - Me</option>
+					</select>
+				{{else userSetting.personalInfo==2}}
+					<select class="personalInfoSelect feedback_fbType">
+						<option value ="0">Personal Info - Public</option>
+						<option value ="1">Personal Info - Friends</option>
+						<option value ="2" selected="true">Personal Info - Me</option>
+					</select>
+				{{/if}}
+				<span type="button" class="mail" data-widget="Button"></span>
+			</p>
+			<p>
+				{{if userSetting.activities==0 }}
+					<select class="activitiesSelect feedback_fbType">
+						<option value ="0" selected="true" >Activities - Public</option>
+						<option value ="1">Activities - Friends</option>
+						<option value ="2">Activities - Me</option>
+					</select>
+				{{else userSetting.activities==1 }}
+				    <select class="activitiesSelect feedback_fbType">
+						<option value ="0">Activities -Public</option>
+						<option value ="1" selected="true">Activities -Friends</option>
+						<option value ="2">Activities -Me</option>
+					</select>
+				{{else userSetting.activities==2  }}
+				    <select  class="activitiesSelect feedback_fbType">
+						<option value ="0">Activities - Public</option>
+						<option value ="1">Activities - Friends</option>
+						<option value ="2" selected="true">Activities - Me</option>
+					</select>
+				{{/if}}
+				<span type="button" class="mail" data-widget="Button"></span>
+			</p>
+			
+			<p>
+				{{if userSetting.visitors==0}}
+					<select class="visitorsSelect feedback_fbType">
+						<option value="0" selected="true">Visitor - Public</option>
+						<option value ="1">Visitor - Friends</option>
+					</select>
+			    {{else userSetting.visitors==1}}
+					<select class="visitorsSelect feedback_fbType">
+						<option value ="0">Visitor - Public</option>
+						<option value ="1" selected="true">Visitor - Friends</option>
+					</select>
+			    {{/if}}
+				<span type="button" class="mail" data-widget="Button"></span>
+			</p>
+			<p>
+				{{if userSetting.forums==0}}
+					<select class="forumsSelect feedback_fbType">
+						<option value="0" selected="true">Subscribed - Public</option>
+						<option value ="1">Subscribed - Friends</option>
+						<option value ="2">Subscribed - Me</option>
+					</select>
+				{{else userSetting.forums==1}}
+				    <select class="forumsSelect feedback_fbType">
+						<option value="0">Subscribed - Public</option>
+						<option value ="1" selected="true">Subscribed - Friends</option>
+						<option value ="2">Subscribed - Me</option>
+					</select>
+			    {{else userSetting.forums==2}}
+				    <select class="forumsSelect feedback_fbType">
+						<option value="0">Subscribed - Public</option>
+						<option value ="1">Subscribed - Friends</option>
+						<option value ="2" selected="true">Subscribed - Me</option>
+					</select>
+				{{/if}}
+				<span type="button" class="mail" data-widget="Button"></span>
+			</p>
+	</section>
+	<section class="custompin">
+		<div class="title">Custom PIN</div>
+		<div class="content">
+			<div class="choose">
+				Sign in via Custom PIN? 
+				<div class="CustomPIN"><span class="help" data-action="home.helpcustompin" >What is it?</span>
+					{{if userSetting.isPin==1}}
+						<div data-ispin="1" data-action ="profile.changeCustompin" class="CustomPINSelect selectyes">yes</div>
+					 {{else}}
+					 	<div data-ispin="0" data-action ="profile.changeCustompin" class="CustomPINSelect selectno">no</div>
+					 {{/if}}
+				</div>
+				
+			</div>
+			<div class="pin-content">
+				{{if userSetting.isPin==1}}
+				<div class="setpin">
+					<div class="des">Set PIN here, 6 - 16 letters & numbers.</div>
+					<input class="text pinnoenter" type="password" placeholder="Enter your custom PIN"  required maxlength="16"  value="${userSetting.pinNo}" />
+					<input class="text pinnoverify" type="password" placeholder="Verify your custom PIN" required maxlength="16" value="${userSetting.pinNo}" />
+				</div>
+				{{/if}}
+			</div>
+		</div>
+	</section>
+	<div class="opr">
+		<input class="fullbtn" type="button" value="Save" data-widget="Button" data-action="profile.settingSubmitmini" />
+		<input class="wbtn fullbtn" type="button" value="Set to Default" data-widget="Button" data-action="profile.defaultsettingmini" />
+	</div>
+</article>

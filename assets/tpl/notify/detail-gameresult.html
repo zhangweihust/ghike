@@ -1,0 +1,41 @@
+<article class="page notify detail" data-widget="WebPage" data-page-title="Results" data-page-navi="null">
+		<div class="detail-info">
+			<div class="con">
+				{{if senderScore > receiverScore}}You were defeated in {{/if}}
+				{{if senderScore < receiverScore}}Congratulations! You were successful in {{/if}}
+				{{if senderScore == receiverScore}}You tied in {{/if}}
+				<span class="name" data-action="profile.friends" data-user-id="${sender.id}" data-widget="Button">${sender.nickName}</span>'s
+				{{if type == 0}}
+				 challenge
+				{{/if}}
+				{{if type == 1}}
+				 competition
+				{{/if}}
+				 in the game: 
+				<span class="name" data-action="games.openDetail" data-game-id="${gameBasic.appId}" data-widget="Button">${gameBasic.title}</span>.
+			</div>
+		</div>
+
+		<div class="emsection show">
+			<div class="user">
+				<img alt="${user.nickName}" src="${userHeadUrl}" />
+				<span class="name">${user.nickName}</span>
+			</div>
+			<div class="points">
+				<span class="title">Points</span>
+				<span class="pts">${receiverScore}-${senderScore}</span>
+				{{if senderScore > receiverScore}}<span class="result">YOU LOSE</span>{{/if}}
+				{{if senderScore < receiverScore}}<span class="result win">YOU WIN</span>{{/if}}
+				{{if senderScore == receiverScore}}<span class="result">TIE</span>{{/if}}
+			</div>
+			<div class="user right">
+				<img alt="${sender.nickName}" src="${senderHeadUrl}" />
+				<span class="name">${sender.nickName}</span>
+			</div>
+		</div>
+		<time>${time}</time>
+		<div class="control">
+			<input name="delete" type="button" value="Delete" data-widget="Button" data-action="challenge.result.delete" data-challenge-id="${resultId}"/>
+			<input name="back" type="button" value="Back" class="wbtn" data-widget="Button" data-action="challenge.result.back"/>
+		</div>	
+</article>

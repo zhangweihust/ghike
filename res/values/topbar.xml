@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="topbar_featured_game">Featured</string>
+    <string name="topbar_new_game">New</string>
+    <string name="topbar_popular_game">Popular</string>
+</resources>

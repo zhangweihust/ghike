@@ -1,0 +1,19 @@
+<li data-newsfeed-id="newsfeed_${feed.data.id[0]}">
+	<h2>
+	{{if feed.data.visitType[0] == "newsfeed" || feed.data.userID[0] != feed.data.fID[0]}}
+	<span class="name" data-action="profile.friends" data-user-id="${feed.data.fID[0]}">${feed.data.fName[0]}</span>
+	{{else}}
+	<span class="name">${feed.data.fName[0]}</span>
+	{{/if}}
+	<aside class="time" data-feed-time="${feed.data.time[0]}">${feed.data.timeStr[0]}</aside></h2>
+	<div class="content">
+		{{if feed.data.visitType[0] == "newsfeed" || feed.data.userID[0] != feed.data.fID[0]}}
+			<img data-action="profile.friends" data-user-id="${feed.data.fID[0]}" class="avata" src="${feed.data.heardUrl[0]}"/>
+		{{else}}
+			<img class="avata" src="${feed.data.heardUrl[0]}"/>
+		{{/if}}
+		<div class="detail">
+			${feed.data.body[0]}
+		</div>
+	</div>
+</li>

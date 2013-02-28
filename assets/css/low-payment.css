@@ -1,0 +1,94 @@
+.bk0 { margin: 0px 0px; clear: both; }
+
+.bk15 { clear: both; line-height: 1.4; }
+
+input { font-size: 1em; }
+
+.hint { color: #f26d47; }
+
+.info { color: #999999; }
+
+.pageerro { padding: 14px 3%; font-size: 15px; line-height: 1.4; }
+
+.bk, .bk38 { margin: 24px 0px; clear: both; }
+
+.btn, .bluebtn, .page.payment .boxBtn.bluebtn, .page.payment .functions .bluebtn, .dialog .payment .bluebtn, .graybtn, .page.payment .functions .graybtn, .dialog .payment .codebtn { display: inline-block; height: 24px; line-height: 24px; padding: 0 8px; font-family: Helvetica; }
+
+.bluebtn, .page.payment .boxBtn.bluebtn, .page.payment .functions .bluebtn, .dialog .payment .bluebtn { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #37a7dc), color-stop(100%, #2c8bd1)); background-image: -webkit-linear-gradient(#37a7dc, #2c8bd1); background-image: -moz-linear-gradient(#37a7dc, #2c8bd1); background-image: -o-linear-gradient(#37a7dc, #2c8bd1); background-image: linear-gradient(#37a7dc, #2c8bd1); border: solid 1px #008fd5; -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4), 0px 1px 2px rgba(255, 255, 255, 0.4) inset; -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4), 0px 1px 2px rgba(255, 255, 255, 0.4) inset; box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4), 0px 1px 2px rgba(255, 255, 255, 0.4) inset; color: #fff; }
+.bluebtn:active, .page.payment .boxBtn.bluebtn:active, .page.payment .functions .bluebtn:active, .dialog .payment .bluebtn:active { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2c8bd1), color-stop(100%, #37a7dc)); background-image: -webkit-linear-gradient(#2c8bd1, #37a7dc); background-image: -moz-linear-gradient(#2c8bd1, #37a7dc); background-image: -o-linear-gradient(#2c8bd1, #37a7dc); background-image: linear-gradient(#2c8bd1, #37a7dc); }
+
+.graybtn, .page.payment .functions .graybtn, .dialog .payment .codebtn { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f0f0f0)); background-image: -webkit-linear-gradient(#ffffff, #f0f0f0); background-image: -moz-linear-gradient(#ffffff, #f0f0f0); background-image: -o-linear-gradient(#ffffff, #f0f0f0); background-image: linear-gradient(#ffffff, #f0f0f0); border: solid 1px #999; color: #999; -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4), 0px 0px 5px rgba(255, 255, 255, 0.6) inset; -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4), 0px 0px 5px rgba(255, 255, 255, 0.6) inset; box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4), 0px 0px 5px rgba(255, 255, 255, 0.6) inset; }
+.graybtn:active, .page.payment .functions .graybtn:active, .dialog .payment .codebtn:active { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #f0f0f0)); background-image: -webkit-linear-gradient(#cccccc, #f0f0f0); background-image: -moz-linear-gradient(#cccccc, #f0f0f0); background-image: -o-linear-gradient(#cccccc, #f0f0f0); background-image: linear-gradient(#cccccc, #f0f0f0); }
+
+.page.payment { font-size: 1.2em; }
+.page.payment input[type="radio"] { display: inline-block; top: 5px; }
+.page.payment .boxBtn { margin: 15px 0px; height: 30px; position: relative; }
+.page.payment .boxBtn input { position: absolute; width: 49%; }
+.page.payment .boxBtn input:first-child { left: 0px; }
+.page.payment .boxBtn input:last-child { right: 0px; }
+.page.payment ul li span { display: inline-block; width: 33.33333333333333%; text-align: center; color: #999999; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+.page.payment ul li span.changed { color: #f26d47; display: inline; margin-left: 10px; }
+.page.payment ul li span.changed em { color: #F26D47; margin: 0 5px; }
+.page.payment nav ul li { font-size: 0.9em; display: inline-block; width: 33.33333333333333%; text-align: center; }
+.page.payment .payment-sec, .page.payment .content, .page.payment .personal { padding: 1% 3%; border-bottom: 1px solid #D4D4CE; }
+.page.payment .recharge .content { padding: 0 3%; }
+.page.payment .content .change { color: #f26d47; }
+.page.payment .content .consumelist li, .page.payment .content nav li { margin: 7.5px 0; }
+.page.payment .content li { border-bottom: 0px solid; box-shadow: 0px 0px 0px; margin: 12.5px 0px; }
+.page.payment .personal { position: relative; line-height: 1.5; }
+.page.payment .personal img { position: absolute; top: 7.5px; width: 50px; height: 50px; -webkit-border-radius: 25px; -moz-border-radius: 25px; -ms-border-radius: 25px; -o-border-radius: 25px; border-radius: 25px; margin-right: 8px; }
+.page.payment .personal .personalInfo { margin-left: 75px; }
+.page.payment .personal .personalInfo div { height: 33px; line-height: 33px; }
+.page.payment .personal .personalInfo .name { font-size: 1.4em; }
+.page.payment .personal .personalInfo .level { background: url(../img/navlogos.png) left 34% no-repeat; padding-left: 38px; background-position: 4px -113px; background-size: 22px; }
+.page.payment .functions { padding: 1% 3%; }
+.page.payment .functions .shadowtext { color: #3C3C3C; }
+.page.payment .functions ul { border: #CCC solid 1px; width: 100%; }
+.page.payment .functions .bluebtn, .page.payment .functions .boxBtn.bluebtn, .page.payment .functions .bluebtn, .dialog .page.payment .functions .bluebtn { height: 29px; }
+.page.payment .functions .graybtn, .page.payment .functions .graybtn, .dialog .page.payment .functions .codebtn { height: 29px; }
+.page.payment .functions li { padding-left: 2%; position: relative; font-size: 0.8em; color: #3C3C3C; line-height: 3; }
+.page.payment .functions li:before { position: absolute; width: 33px; height: 100%; right: 1%; top: 0px; content: ''; background-image: url(../img/arrow-heavy.png); background-repeat: no-repeat; background-size: 30% 30%; background-position: center; }
+.page.payment .functions li:last-child { border-bottom: 0px solid; }
+.page.payment label { display: block; }
+.page.payment input.full { width: 100%; }
+.page.payment .records time { color: #999; position: relative; padding-left: 25px; float: right; }
+.page.payment .records ul.list li span { text-align: left; }
+.page.payment .records ul.list li span.hint { float: right; text-align: right; }
+.page.payment .records ul li { padding: 1% 3%; }
+.page.payment .records ul li span { display: inline; text-align: left; color: #3C3C3C; }
+.page.payment .records ul li dt, .page.payment .records ul li dd { margin: 6px 0px; clear: both; }
+.page.payment.consume ul.list li span { width: 50%; text-align: left; }
+.page.payment.consume ul.list li span.hint { float: right; text-align: right; }
+
+.dialog .payment { font-size: 1em; }
+.dialog .payment .recharge-list { margin: 10px 0px; clear: both; font-size: 0.9em; line-height: 1.2; }
+.dialog .payment .recharge-list li { margin: 2px 0px; }
+.dialog .payment .recharge-list li span { text-align: left; display: inline-block; width: 50%; }
+.dialog .payment .recharge-list li .hint { text-align: right; }
+.dialog .payment .hintred { color: #f26d47; }
+.dialog .payment input[type="text"] { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f0f0f0), color-stop(100%, #ffffff)); background-image: -webkit-linear-gradient(#f0f0f0, #ffffff); background-image: -moz-linear-gradient(#f0f0f0, #ffffff); background-image: -o-linear-gradient(#f0f0f0, #ffffff); background-image: linear-gradient(#f0f0f0, #ffffff); width: 70%; font-size: 0.8em; padding-left: 6px; height: 32.75px; border: 1px solid #999; }
+.dialog .payment .codebtn { width: 100%; font-size: 0.8em; height: 27.5px; }
+.dialog .payment .bluebtn, .dialog .page.payment .boxBtn.bluebtn, .dialog .page.payment .functions .bluebtn, .dialog .payment .bluebtn { font-size: 1em; height: 27.5px; }
+.dialog .payment .graybtn, .dialog .page.payment .functions .graybtn, .dialog .payment .codebtn { font-size: 1em; height: 27.5px; }
+.dialog .payment span.getcode { font-size: 0.8em; display: inline-block; height: 32.75px; padding: 2px; position: absolute; width: 25%; text-align: -webkit-auto; border: solid 1px #CCC; -webkit-appearance: none; background-clip: padding-box; -webkit-background-clip: padding-box; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f0f0f0), color-stop(100%, #ffffff)); background-image: -webkit-linear-gradient(#f0f0f0, #ffffff); background-image: -moz-linear-gradient(#f0f0f0, #ffffff); background-image: -o-linear-gradient(#f0f0f0, #ffffff); background-image: linear-gradient(#f0f0f0, #ffffff); }
+.dialog .payment .error { visibility: hidden; text-align: left; padding-left: 7.5px; background-color: #FEE; border: 1px solid #FE9A9A; color: #F99; line-height: 25.5px; height: 25.5px; width: 99%; }
+
+.popup .dialog { opacity: 100%; position: fixed; width: 91%; left: 4.5%; z-index: 1010; border-radius: 6px; padding: 4px; background: rgba(0, 0, 0, 0.3); }
+.popup .dialog header { background: #949294; color: #fff; line-height: 40px; padding-left: 4.5%; font-size: 1.4em; border: solid 1px #a8a6a8; }
+.popup .dialog header .sendpin { display: block; background: url(../../img/touch/sendpin.png) center no-repeat; background-size: 49px auto; }
+.popup .dialog section { background: #fff; padding: 4.5%; }
+.popup .dialog section .content { color: #999; font-size: 1.23em; font-family: Omnes; }
+.popup .dialog section .content textarea { font-size: .81em; height: 52px; }
+.popup .dialog section .buttons { margin-top: 6px; }
+.popup .dialog section input.ok { width: 64%; }
+.popup .dialog section input.cancel { width: 32%; float: right; }
+.popup .dialog section input.full { width: 100%; }
+.popup .dialog .avata { height: 60px; }
+.popup .dialog .avata label span { padding-left: 60px; background-size: 45px; background-position: 0px 0px; background-repeat: no-repeat; display: inline-block; line-height: 45px; margin-bottom: -8px; background-image: url(../../img/touch/avata-upload.png); }
+.popup .dialog .avata label span em { color: #666; font-size: .81em; display: inline-block; border: solid 1px #999; padding: 0px 15px; line-height: 33px; }
+.popup .dialog .avata input[type="file"] { height: 1px; visibility: hidden; font-size: 0px; }
+.popup .dialog .avata input[type="submit"] { width: 100%; }
+.popup .dialog .avataupload span { display: inline-block; vertical-align: middle; }
+.popup .dialog .avataupload span.avata { height: 41px; padding: 2px; border: solid 0.5px #9f9f9f; }
+.popup .dialog .avataupload span.avata .avataimg { border: solid 1px #666; }
+.popup .dialog .avataupload span.verify { margin-left: 18.5px; text-align: center; color: #666; font-size: .81em; border: solid 1px #999; width: 161px; line-height: 33px; }

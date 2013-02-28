@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mTermofService"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:focusable="false"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/TermofServiceRelative"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_yellow_header" >
+
+            <!-- tools:ignore="UselessParent" -->
+            <TextView
+                android:id="@+id/TermofService_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent = "true"
+                android:text="@string/termsofservice"
+                android:contentDescription="@string/playgame"
+                android:textSize="22dp"
+                android:textColor="@color/white"
+                />
+
+        </RelativeLayout>
+        
+           <zonesdk.in.android.games.in.widget.HikeWebView
+	            android:id="@+id/service_web_view"
+           		android:fadingEdge="none"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	       		android:focusable="true"
+	       		android:background="@color/white"
+	       		android:layout_marginTop="0dp"/>
+
+      
+
+    </LinearLayout>

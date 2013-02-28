@@ -1,0 +1,34 @@
+/*add this part to every file*/
+/*add this part to every file*/
+.notify .msg-list li { min-height: 69px; }
+.notify .msg-list li h1 { font-size: 1.25em; line-height: 18px; }
+.notify .msg-list li h2 { font-size: .83em; color: #999999; margin-top: 8px; margin-bottom: 4px; }
+.notify .msg-list li.unread { background-color: #fff5ea; }
+.notify.list .message .msg-list li { background: url(../img/notify-list-arrow.png) no-repeat 94% center; background-size: auto 11px; padding-left: 4.4%; padding-top: 8px; }
+.notify.list .message .msg-list li.unread { background-color: #fff5ea; }
+.notify.list .game .msg-list li { position: relative; padding-left: 20.3%; padding-top: 10px; padding-right: 26%; }
+.notify.list .game .msg-list li .avata { position: absolute; top: 10px; left: 4%; width: 40px; height: 40px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; }
+.notify.list .game .msg-list li .avata.game { -webkit-border-radius: 0px; -moz-border-radius: 0px; -ms-border-radius: 0px; -o-border-radius: 0px; border-radius: 0px; }
+.notify.list .game .msg-list li h1 em { font-weight: bold; }
+.notify.list .game .msg-list li .play { position: absolute; right: 13%; width: 50px; height: 100%; top: 0px; }
+.notify.list .game .msg-list li .play .btn { position: absolute; top: 20px; right: 0px; }
+.notify.list .game .msg-list li .del { position: absolute; right: 0px; width: 40px; top: 0px; height: 100%; }
+.notify.list .game .msg-list li .del .btn { position: absolute; top: 20px; width: 23px; height: 24px; padding-left: 5.5px; padding-top: 1px; right: 33%; }
+.notify.list .game .msg-list li .del .btn img { width: 11px; height: 11px; }
+.notify.list .game .msg-list li .ignored { position: absolute; right: 3.125%; top: 0px; height: 100%; width: 60px; }
+.notify.list .game .msg-list li .ignored .btn { position: absolute; top: 20px; right: 0px; }
+.notify.list .friend .msg-list li { position: relative; padding-left: 20.3%; padding-top: 10px; padding-right: 26%; }
+.notify.list .friend .msg-list li .avata { position: absolute; top: 10px; left: 4%; width: 40px; height: 40px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; }
+.notify.list .friend .msg-list li .avata.game { -webkit-border-radius: 0px; -moz-border-radius: 0px; -ms-border-radius: 0px; -o-border-radius: 0px; border-radius: 0px; }
+.notify.list .friend .msg-list li h1 { font-weight: bold; font-size: 1.5em; }
+.notify.list .friend .msg-list li h2 { color: #666666; font-size: .92em; margin-top: 6px; }
+.notify.list .friend .msg-list li h3 { color: #999999; font-size: .92em; margin-top: 6px; }
+.notify.list .friend .msg-list li .play { position: absolute; right: 13%; width: 50px; height: 100%; top: 0px; }
+.notify.list .friend .msg-list li .play .btn { position: absolute; top: 20px; right: 0px; }
+.notify.list .friend .msg-list li .del { position: absolute; right: 0px; width: 40px; top: 0px; height: 100%; }
+.notify.list .friend .msg-list li .del .btn { position: absolute; top: 20px; width: 23px; height: 24px; padding-left: 5.5px; padding-top: 1px; right: 33%; }
+.notify.list .friend .msg-list li .del .btn img { width: 11px; height: 11px; }
+.notify.list .friend .msg-list li .ignored { position: absolute; right: 3.125%; top: 0px; height: 100%; width: 60px; }
+.notify.list .friend .msg-list li .ignored .btn { position: absolute; top: 20px; right: 0px; }
+.notify.detail p { padding: 4.6%; font-size: 1.25em; line-height: 20px; border-bottom: solid 1px #ccc; }
+.notify.detail .time { padding-right: 4.6%; font-size: .83em; color: #999999; text-align: right; line-height: 26px; height: 26px; font-family: Helvetica; }

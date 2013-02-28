@@ -1,0 +1,19 @@
+<article class="page notify detail gameinvite" data-widget="WebPage" data-page-title="Invitations" data-page-navi="null">
+		<ul class="friend-list">
+	     	{{each(i,inviteUser) inviteUserList}}
+			<li class="arrow" data-widget="Button" data-action="profile.friends" data-user-id="${inviteUser.id}">
+				<div class="wrapper">
+					<img src="${inviteUser.headUrl}" alt="">
+					<div class="info">
+						<div class="name">${inviteUser.nickName}</div>
+						<div class="mutual">${inviteUser.status} mutual {{if inviteUser.status > 1}}friends{{else}}friend{{/if}}</div>
+					</div>
+				</div>
+			</li>
+			{{/each}}
+		</ul>
+		<div class="control">
+			<input name="play" type="button" value="Play" data-widget="Button" data-action="notify.game.invite.play" data-id-list="${idString}" data-inviter-list="${inviterString}" data-app-id="${appId}"/>
+			<input name="back" type="button" value="Back" class="wbtn" data-widget="Button" data-action="notify.game.invite.back"/>
+		</div>
+</article>

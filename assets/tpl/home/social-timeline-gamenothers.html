@@ -1,0 +1,18 @@
+<article class="page social timeline" data-widget="WebPage" data-page-title="${gameName}">
+	<ul class="nothers-list">
+		{{each(i, friend) friends}}
+		<li data-widget="Button" id="${friend.id}">
+			<img class="avata" src="${friend.headUrl}" data-action="profile.friends" data-user-id="${friend.id}"/>
+			<div class="info">
+				<span class="name" data-action="profile.friends" data-user-id="${friend.id}">${friend.nickName}</span>
+				<span class="common">${descMap[friend.id]}</span>
+			</div>
+		</li>
+		{{/each}}
+	</ul>
+	{{if inviterList != "" && inviterList != undefined}}
+	<div class="playbtn bluebtn" data-action="notify.game.invite.playForOthers" data-app-id="${gameId}" data-package-name="${packageName}" data-platform-type="${platformType}" data-inviter-list="${inviterList}" data-id-list="${idList}">Play</div>
+	{{else}}
+	<div class="playbtn bluebtn" data-action="games.playFromNewsfeed" data-game-id="${gameId}">Play</div>
+	{{/if}}
+</article>

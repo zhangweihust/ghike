@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- For Google Play
+  <string name="ga_trackingId">UA-37194693-1</string>
+  -->
+  <!-- For Dev & Test
+  <string name="ga_trackingId">UA-37505980-1</string>
+  -->
+  <string name="ga_trackingId">UA-37505980-1</string>
+  <bool name="ga_autoActivityTracking">false</bool>
+  <bool name="ga_reportUncaughtExceptions">true</bool>
+</resources>

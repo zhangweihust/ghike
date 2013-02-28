@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:padding="3dp"
+    android:background="@drawable/linearlayout_shape_white" >
+
+    <TextView
+            android:id="@+id/dialog_title_text"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+	        android:layout_alignParentTop="true"
+	        android:background="@color/dialogheader"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:paddingLeft="12dp"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/whiteback"
+            android:textSize="18sp"
+            tools:context=".DialogActivity"
+		    android:visibility="gone" />
+    
+    <LinearLayout
+        android:id="@+id/dialog_center_view"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:layout_below="@id/dialog_title_text"
+		android:padding="15dp">
+		
+	    <TextView
+	            android:id="@+id/dialog_display_text"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="top"
+		        android:textSize="16sp"
+		        android:textColor="@color/dialog_color_text"
+	        	android:layout_marginBottom="5dp" 
+		        android:visibility="gone" />
+	
+	    <EditText
+	        android:id="@+id/dialog_input_content"
+	        android:layout_width="fill_parent"
+	        android:layout_height="60dp"
+		    android:padding="5dp"
+	        android:background="@drawable/btn_shape_white_rec"
+	        android:gravity="top"
+	        android:textSize="15sp"
+	        android:layout_marginBottom="5dp"
+		    android:visibility="gone" />
+	    
+	    <LinearLayout
+	        android:id="@+id/dialog_bottom_bottons"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center" >
+	
+	        <Button
+	            android:id="@+id/dialog_confirm_button"
+	            android:layout_width="125dp"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="5dp"
+	            android:background="@drawable/surebtn_shape_white"
+	            android:textColor="@color/white"
+	        	android:textSize="13sp"
+			    android:visibility="gone" />
+	
+	        <Button
+	            android:id="@+id/dialog_cancel_button"
+	            android:layout_width="125dp"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="5dp"
+	            android:background="@drawable/cancelbtn_shape_white"
+	            android:textColor="@color/gray"
+	        	android:textSize="13sp"
+			    android:visibility="gone" />
+	        
+	    </LinearLayout>
+    
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <!-- Top bar -->
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/header_bg" >
+
+        <ImageButton
+            android:id="@+id/ContentEditorLeftButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/nav_back" />
+
+        <TextView
+            android:id="@+id/HeadContentEditorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Post Status"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/ContentEditorRightButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/send_btn" />
+    </RelativeLayout>
+
+    <!-- Tool card -->
+    <FrameLayout
+        android:id="@+id/content_edit_toolcard"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <RelativeLayout
+            android:id="@+id/face_lay"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:background="@color/white"
+            android:visibility="gone" >
+
+            <zonesdk.in.android.games.in.widget.ScrollLayout
+                android:id="@+id/face_bg_lay"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:visibility="visible" >
+            </zonesdk.in.android.games.in.widget.ScrollLayout>
+
+            <ImageView
+                android:id="@+id/face_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/face_bg_lay"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-20dip"
+                android:background="@drawable/face_page1" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/view_atfriends"
+            android:layout_width="fill_parent"
+            android:layout_height="300dp"
+            android:background="@color/white"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/list_no_friends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="16sp"
+                android:text="@string/nofriends"
+                android:visibility="gone" />
+            <ListView
+                android:id="@+id/list_atfriends"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="#DDDDDD"
+                android:dividerHeight="1dip"
+                android:fadingEdge="none"
+                android:focusableInTouchMode="true"
+                android:listSelector="@drawable/list_item_selector" />
+            
+        </RelativeLayout>
+    </FrameLayout>
+
+    <!-- Input Area -->
+
+    <RelativeLayout
+        android:id="@+id/input_area"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="45dp"
+        android:layout_above="@id/content_edit_toolcard" >
+
+        <EditText
+            android:id="@+id/SubjectEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:hint="@string/status"
+            android:maxLength="140"
+            android:textColor="@color/gray"
+            android:visibility="gone" />
+        
+        <EditText
+            android:id="@+id/ContentEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+        	android:layout_marginTop="14dp"
+        	android:layout_marginLeft="14dp"
+        	android:layout_marginRight="14dp"
+            android:layout_marginBottom="62dp"
+            android:background="@drawable/btn_shape_white_rec"
+            android:focusable="true"
+            android:gravity="top"
+            android:maxLength="141"
+            android:hint="@string/status_hint"
+            android:textColor="@color/gray" />
+
+        <!-- Options  -->
+        <RelativeLayout
+            android:id="@+id/opt_lay"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/relation_list_header_bg" >
+
+            <ToggleButton
+                android:id="@+id/keyboard_smail_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/smail"
+                android:checked="true"
+                android:textOff=""
+                android:textOn="" />
+
+            <ImageButton
+                android:id="@+id/emotionLeftButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/keyboard_smail_btn"
+                android:background="@drawable/atfriends" />
+
+            <TextView
+                android:id="@+id/emotionRightText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:text="/140"
+                android:textSize="17dp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/emotionRightCountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/emotionRightText"
+                android:text="0"
+                android:textSize="17dp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+        
+    </RelativeLayout>
+
+</RelativeLayout>

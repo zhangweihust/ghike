@@ -1,0 +1,14 @@
+<article class="page forum mycommunity"  data-widget="WebPage" data-animation="fade" data-page-title="My Communities" data-page-navi="forum" data-left-action="goBack">
+	<section class="opr">
+		<span class="left active"  data-action="forum.myforum" data-widget-id="myforumButton" >My Forums</span>
+		<span class="right" data-action="forum.mypost" data-widget-id="mypostButton">My Posts</span>
+	</section>
+      <section data-widget="DataView" data-on-scrolldata="forum.myforumsscroll" data-widget-id="myforum">
+		<ul class="forumlist">
+		</ul>
+	  </section>
+      <section data-widget="DataView" data-on-scrolldata="forum.mypostsscroll" data-widget-id="mypost" style="display:none" >
+		<ul class="postlist">
+		</ul>
+	 </section>
+</article>

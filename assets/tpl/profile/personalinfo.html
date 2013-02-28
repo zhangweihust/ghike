@@ -1,0 +1,43 @@
+<article class="page profile personalinfo" data-on-open ="profile.dateControl" data-widget="WebPage" data-page-title="Editing Personal Info" data-page-navi="profile">
+	<div class="editsection">
+		<section class="emsection">
+			<p>Nickname <span>*</span></p>
+			<input type="text" name="nickName" id="nickName" maxlength="15" class="personalinfo_nickName" value="${user.nickName}"/>
+			<p class="nickerror error"></p>
+			<p>First Name</p>
+			<input type="text" name="firstName" id="firstName" maxlength="20" class="personalinfo_firstName" value="${user.firstName}"/>
+			<p class="firsterror error"></p>
+			<p>Last Name</p>
+			<input type="text" name="lastName" id="lastName" maxlength="20" class="personalinfo_lastName" value="${user.lastName}"/>
+			<p class="lasterror error"></p>
+			<p>Gender</p>
+			<input type="radio" name="gender" id="male" class="personalinfo_male"   value="0" {{if user.gender==0}}checked{{/if}} />
+			<label>Male</label>
+			<input type="radio" name="gender" id="female" class="personalinfo_female" value="1" {{if user.gender==1}}checked{{/if}} />
+			<label>Female</label>
+			<p>Date of Birth</p>
+			{{if user.month}}
+			<input type="text" name="month" id="month" maxlength="2" class="personalinfo_month" value="${user.month}"/>
+			{{else}}
+			<input type="text" name="month" id="month" maxlength="2" class="personalinfo_month" placeholder="MM" value=""/>
+			{{/if}}
+			{{if user.day}}
+			<input type="text" name="day" id="day" maxlength="2" class="personalinfo_day" value="${user.day}"/>
+			{{else}}
+			<input type="text" name="day" id="day" maxlength="2" class="personalinfo_day" placeholder="DD" value=""/>
+			{{/if}}
+			{{if user.year}}
+			<input type="text" name="year" id="year" maxlength="4" class="personalinfo_year" value="${user.year}"/>
+			{{else}}
+			<input type="text" name="year" id="year" maxlength="4" class="personalinfo_year" placeholder="YYYY" value=""/>
+			{{/if}}
+			<p class="birtherror error"></P>
+			<div class="spacer"></div>
+			<p>Mobile Number</p>
+			<input type="text" value="${user.mobileNum}" disabled/>
+			<p>Operator</p>
+			<input type="text" value="${user.operator}" disabled/>
+		</section>
+		<input name="submit" type="button" value="Submit" data-action="profile.personalinfoSubmit" class="fullbtn" data-widget="Button"/>
+	</div>
+</article>

@@ -1,0 +1,22 @@
+<article class="page notify detail" data-widget="WebPage" data-page-title="Notification" data-page-navi="null">
+		<div class="detail-info" data-action="">
+			<img alt="${applicantUser.nickName}" src="${applicantHeadUrl}" />
+			<div class="con">
+				<div class="inner">
+					<span class="friendname" data-action="profile.friends" data-user-id="${applicantUser.id}" data-widget="Button">${applicantUser.nickName}</span>
+					<span class="mutual">${mutualFriendCount} mutual friends, ${mutualGameCount} common games</span>
+				</div>
+			</div>
+		</div>
+		<textarea readonly>${content}</textarea>
+		<div class="control">
+			{{if notifyStatus == 0 || notifyStatus == 1}}
+			<input name="accept" type="button" value="Accept" data-widget="Button" data-action='notify.friend.accept' data-applicant='${applicantUser.id}' data-accepter='${accepterUser.id}'/>
+			{{/if}}
+			{{if notifyStatus == 2}}
+			<input name="accept" type="button" value="Accepted" data-widget="Button" class="okbtn weak"/>
+			{{/if}}
+			<input name="later" type="button" value="Later" data-widget="Button" data-action='notify.friend.later' data-applicant='${applicantUser.id}' data-accepter='${accepterUser.id}'/>
+			<input name="reject" type="button" value="Reject" class="wbtn" data-widget="Button" data-action='notify.friend.reject' data-applicant='${applicantUser.id}' data-accepter='${accepterUser.id}'/>
+		</div>
+</article>

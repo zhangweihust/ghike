@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mSignInPincodeView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:content="@+id/myContent"
+        android:focusable="false"
+        android:handle="@+id/myLayout"
+        android:orientation="vertical"
+        android:background="@color/white">
+             
+   <RelativeLayout
+            android:id="@+id/signintitle1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_yellow_header" >
+
+            <ImageView
+                android:id="@+id/SignInPincodeView_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/header_hike"
+                android:contentDescription="@string/playgame"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/PincodesigninView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:id="@+id/mSignInPincodeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_centerHorizontal = "true"
+                android:text="@string/ifgetpin"              
+                android:layout_alignParentTop="true"
+                android:textColor="@color/darkgray"
+                android:layout_marginTop = "20dip"           
+                android:textSize="15sp" />
+            
+             <TextView
+                android:id="@+id/mSignInincodeTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_centerHorizontal = "true"
+                android:text="@string/enter"    
+                android:layout_below = "@+id/mSignInPincodeTextView"          
+                android:textColor="@color/darkgray"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/mSignInPincodePincodeEditText"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_below = "@+id/mSignInPincodeTextView"
+                android:layout_marginTop = "25dip"
+                android:layout_marginLeft = "10dip"
+                android:layout_marginRight = "10dip"
+                android:hint = "@string/pin"
+                android:drawableLeft = "@drawable/login_pincode"
+                android:drawablePadding = "10dip"
+                android:paddingLeft="10dip"
+                android:maxLength="4"
+                android:inputType = "textPassword"
+                android:background="@drawable/btn_shape_white_rec"
+                android:layout_centerInParent="true" 
+                android:textSize = "15sp"
+                android:textColor = "@color/gray"
+                />
+            
+
+
+            <Button
+                android:id="@+id/mSignInPincodeNextBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_below = "@+id/mSignInPincodePincodeEditText"
+                android:layout_marginTop = "15dip"
+                android:layout_marginLeft = "10dip"
+                android:layout_marginRight = "10dip"
+                android:contentDescription="@string/notice"
+                android:text="@string/next" 
+                android:textColor = "@color/gray"
+                android:textSize = "15sp"
+                android:clickable="false"/>
+
+<!--             <TextView
+                android:id="@+id/PincodeText3"
+                android:layout_width="wrap_content"
+                android:layout_height="24dip"
+                android:layout_alignParentBottom="true"
+                android:text="tap here to change number"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:textStyle="bold" 
+                
+                /> -->
+              <TextView
+                android:id="@+id/mSignInPincodeTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_below = "@+id/mSignInPincodeNextBtn"
+                android:layout_marginTop = "10dip" 
+                android:layout_marginLeft = "54dip"
+                android:text="@string/ifwrongpin"              
+                android:textColor="@color/gray"                       
+                android:textSize="14sp" />
+            
+             <TextView
+                android:id="@+id/SignIntap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_toRightOf = "@+id/mSignInPincodeTextView2"
+                android:layout_marginLeft = "5dip"
+                android:layout_alignBottom = "@+id/mSignInPincodeTextView2"
+                android:text="@string/tap"    
+                android:textColor="@color/darkblue"
+                android:textSize="14sp" 
+                />
+        </RelativeLayout>
+        
+        
+    </LinearLayout>

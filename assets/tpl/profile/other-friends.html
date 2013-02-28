@@ -1,0 +1,13 @@
+<article class="page social friends" data-page-title="tab" data-widget="WebPage" data-tool="search">
+
+<div data-widget="NativeTab" {{if isMutual=='Y'}} data-active-tab="1"  {{else isMutual=='N'}}  data-active-tab="0"   {{/if}} >
+	<section data-title="Friends" data-widget="DataView2" data-on-scrolldata="profile.getOthersFriends" data-user-id="${userId}">
+		<ul class="friend-list">
+		</ul>
+	 </section>
+	 <section data-title="Mutual" data-widget="DataView2" data-on-scrolldata="profile.getOthersMutualFriends" data-user-id="${userId}">
+		<ul class="friend-list">
+		</ul>
+	 </section>
+	</div>
+</article>     

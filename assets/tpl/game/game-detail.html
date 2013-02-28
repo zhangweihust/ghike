@@ -1,0 +1,66 @@
+<article class="page game game-detail" data-widget="WebPage" data-page-navi="game">
+	<section>
+		<img class="avata" src="${URL_STATIC_IMG}/${game.appIconCover.touchIcon}"/>
+		<span class="name">${game.title}</span>
+		<span class="curpos">
+			<input type="button" class="bluebtn active" data-action="games.playFriends" data-user-id="${userId}" data-game-id="${game.appId}" value="Play Friends" />
+			{{if isApp}}
+					{{if isInstall}}
+					<input type="button" class="greenbtn active" data-action="{{if userId>0}}games.play{{else}}home.launch{{/if}}" data-game-id="${game.appId}" data-package-name="${game.packageName}" value="Play" />
+					{{else}}
+					<input type="button" class="greenbtn {{if progress > -1 && progress < 100}} disabled {{/if}} active" id="downloadGame"
+						{{if progress < 0 }}
+						    data-action="games.gameinstall"
+						{{else progress == 100}}
+							data-action="games.installApk"
+						{{/if}}
+						data-widget-id='downloadbtn' data-game-id="${game.appId}" data-package-name ="${game.packageName}" data-game-title ="${game.title}" data-downloadurl ="${game.downloadUrl}" value="{{if progress==100}}Install{{else}}Download{{/if}}"
+						 />
+		            {{/if}}
+		        {{else}}
+		        <input type="button" class="greenbtn active" data-action="{{if userId>0}}games.htmlplay{{else}}home.launch{{/if}}" data-game-id="${game.appId}" value="Play" />
+		        {{/if}}
+		</span>
+		{{if gamesize != '0B' }}
+             <span class = "filesize">${gamesize} </span>
+        {{/if}}
+	</section>
+	<section class="download_action" style="{{if isInstall || progress == 100 || progress == -1 }}display:none{{/if}}">
+		<div class="loading_bg"><div class="loading"><span {{if progress > 0}} style="width:${progress}%" {{/if}}>${progress}%</span></div></div>
+	</section>
+	<section style="{{if game.enableLeaderboard == 0 && game.enableScreenshot == 0}}display:none{{/if}}">
+				<div data-action="games.screenshot" data-url-id ="${game.appIconCover.screenshotIcon1}|${game.appIconCover.screenshotIcon2}|${game.appIconCover.screenshotIcon3}">
+					<ul class="image_bar">
+					    <li><div class="avata" data-game-id='1' data-game-name="${game.title}" style="background-image:url(${hike.domain.URL_STATIC_IMG}/${game.appIconCover.screenshotIcon1})" data-action="games.screenshot" data-index="0" data-url-id ="${game.appIconCover.screenshotIcon1}|${game.appIconCover.screenshotIcon2}|${game.appIconCover.screenshotIcon3}" ></div></li>
+						<li><div class="avata" data-game-id='1' data-game-name="${game.title}" style="background-image:url(${hike.domain.URL_STATIC_IMG}/${game.appIconCover.screenshotIcon2})" data-action="games.screenshot" data-index="1" data-url-id ="${game.appIconCover.screenshotIcon1}|${game.appIconCover.screenshotIcon2}|${game.appIconCover.screenshotIcon3}" ></div></li>
+						<li><div class="avata" data-game-id='1' data-game-name="${game.title}" style="background-image:url(${hike.domain.URL_STATIC_IMG}/${game.appIconCover.screenshotIcon3})" data-action="games.screenshot" data-index="2" data-url-id ="${game.appIconCover.screenshotIcon1}|${game.appIconCover.screenshotIcon2}|${game.appIconCover.screenshotIcon3}" ></div></li>
+					</ul>
+					<span data-action="games.screenshot" data-index="0" data-url-id ="${game.appIconCover.screenshotIcon1}|${game.appIconCover.screenshotIcon2}|${game.appIconCover.screenshotIcon3}">ScreenShots</span>
+				</div>
+				<div data-action="games.leaderboard" data-game-id="${game.appId}" data-platform-type="${game.platformType}"  data-download-url ="${game.downloadUrl}" 
+				data-package-name ="${game.packageName}" data-game-title ="${game.title}" data-board-type="specific-leaderboard" >
+			   <ul class="image_bar">
+			       {{each(rr, gameUser) gameUserList}}
+					<li>
+					<div class="avata" data-game-id='1' data-game-name="Angry pigs" style="background-image:url(${gameUser.headUrl})"></div>
+					</li>
+				    {{/each}}
+				</ul>
+					<span>Leaderboard</span>
+				</div>
+	</section>
+	<section>
+		<header>
+			<div class="prompt">
+				<img src="${user.headUrl}" />
+				<span></span>
+				<div data-action="topic.topiclogin" data-forum-id="${forumId}" data-game-title="${game.title}" data-game-id="${game.appId}"> Start a discussion...</div>
+			</div>
+		</header>
+	
+	<div data-widget="DataView" data-on-scrolldata="games.openTopicList" data-game-id="${game.appId}" data-page-size="10">
+			<ul class="timeline-list">
+			</ul>
+		</div>
+	</section>
+</article>

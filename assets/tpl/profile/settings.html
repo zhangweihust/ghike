@@ -1,0 +1,78 @@
+<article class="page social edit" data-page-title="Setting" data-widget="WebPage"  data-animation="fade" data-on-open="profile.changeLogintype">
+  <section data-title="Setting" >
+		 <ul class="edit-list">
+			<li>
+				<div class="editname">NICKNAME<span>*</span></div>
+				<div class="fullname">
+				  <input data-widget="InputFocus" type="text" name="nickName" id="nickName" maxlength="15" class="edittext personalinfo_nickName" value="${userInfo.nickName}"/>
+				</div>
+			</li>
+			
+		    <li>
+			<div class="editname">FULLNAME</div>
+			<div class="fullname">
+			<input data-widget="InputFocus" type="text" name="firstName" id="firstName" maxlength="30" class="edittext personalinfo_firstName " value="${userInfo.firstName}"/>
+			</div>
+			
+			</li>
+			
+			<li style ="display:none">
+			<p>Last Name</p>
+			<input data-widget="InputFocus" type="text" name="lastName" id="lastName" maxlength="20" class="edittext personalinfo_lastName" value="${userInfo.lastName}"/>
+			</li>
+			
+			<li>
+			
+			<div class="editname">GENDER</div>
+			<div class="fullname">
+			<label>
+			<input type="radio" name="gender" id="male" class="personalinfo_male"   value="0" {{if userInfo.gender==0}}checked{{/if}} />
+			Male</label>
+			<label>
+			<input type="radio" name="gender" id="female" class="personalinfo_female" value="1" {{if userInfo.gender==1}}checked{{/if}} />
+			Female</label>
+			</div>
+			</li>
+			
+			<li>
+			<div class="editname">DATE OF BIRTH</div>
+			<div class="fullname">
+			
+			{{if userInfo.month}}
+			<input data-widget="InputFocus" data-kind="number" type="text" name="month" id="month" maxlength="2" class="personalinfo_month" placeholder="MM" value="${userInfo.month}"/>
+			{{else}}
+			<input data-widget="InputFocus" data-kind="number" type="text" name="month" id="month" maxlength="2" class="personalinfo_month" placeholder="MM" value=""/>
+			{{/if}}
+			{{if userInfo.day}}
+			<input data-widget="InputFocus" data-kind="number" type="text" name="day" id="day" maxlength="2" class="personalinfo_day" placeholder="DD" value="${userInfo.day}"/>
+			{{else}}
+			<input data-widget="InputFocus" data-kind="number" type="text" name="day" id="day" maxlength="2" class="personalinfo_day" placeholder="DD" value=""/>
+			{{/if}}
+			{{if userInfo.year}}
+			
+			<input data-widget="InputFocus" data-kind="number" type="text" name="year" id="year" maxlength="4" class="personalinfo_year" placeholder="YYYY" value="${userInfo.year}"/>
+			{{else}}
+			<input data-widget="InputFocus" data-kind="number" type="text" name="year" id="year" maxlength="4" class="personalinfo_year" placeholder="YYYY" value=""/>
+			{{/if}}
+			
+			</div>
+			</li>
+			<li  style="display:none">
+			<div class="spacer"></div>
+			<p>Mobile Number</p>
+			<input data-widget="InputFocus" type="text" value="${userInfo.mobileNum}" disabled/>
+			<p>Operator</p>
+			<input data-widget="InputFocus" type="text" value="${userInfo.operator}" disabled/>
+			</li>
+		</ul>
+		   <p class="nickerror error"></p>
+	       <p class="firsterror error"></p>
+		   <p class="lasterror error"></p>
+		   <p class="birtherror error"></P>
+	    
+	    <div class="settingbtn">
+           <span class="bluebtn save fullbtn" data-action="profile.personalinfoSubmit" data-widget="Button">Save</span>
+           <span class="graybtn save" data-action="topic.back" data-widget="Button">Cancel</span>
+       </div>
+	</section>
+</article>

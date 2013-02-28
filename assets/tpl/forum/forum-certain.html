@@ -1,0 +1,33 @@
+<article class="page forum forum-certain"  data-widget="WebPage" data-animation="fade" data-page-title="Forum" data-page-navi="forum" data-left-action="goBack">
+	<section class="topinfo">
+		<div class="topinfo-pic">
+			<img src="${URL_STATIC_IMG}/${game.appIconCover.touchMediumCover}" data-action="games.openDetail" data-game-id='${game.appId}'/>
+		</div>
+		<div class="topinfo-txt">
+			<div class="gamename">
+				${game.title}
+				{{if userForum == null}}
+			     <input name="subscribe" type="button" value="Subscribe" data-widget="Button" data-transition="slide" data-action="forum.subscribe" data-forum-id="${forum.forumId}" data-board-type="specific-topplayers" id="subscribe"/>
+			    {{else}}
+			     <input name="subscribed" type="button" value="Subscribed" data-widget="Button" />
+			    {{/if}}
+			</div>
+			<div class="cnts">
+				<span>Topics: ${topicNum}</span>
+				<span>Today: ${todayNum}</span>
+			</div>
+			<div class="link" data-action="forum.home">
+				Go to Game Community &gt;	
+			</div>
+		</div>
+		<div class="clear"></div>
+	</section>
+	<section class="opr">
+		<input name="addnew" type="button" class="wbtn" value="Add a New Topic" data-widget="Button" data-action="topic.topiclogin" data-forum-id="${forum.forumId}" data-board-type="specific-topplayers" />
+	</section>
+	<section class="topics" data-widget="DataView" data-on-scrolldata="forum.topicdetail" data-forum-id="${forum.forumId}" data-page-size="10">
+	      <ul class="topiclist">
+	
+	     </ul>
+	</section>
+</article>

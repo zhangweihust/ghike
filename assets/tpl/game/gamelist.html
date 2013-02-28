@@ -1,0 +1,22 @@
+<article class="{{if gameType== 'recently-played'}}
+         page game recentplay
+        {{else gameType == 'all'}}
+         page game game-list-new
+        {{/if}}"
+         data-widget="WebPage"
+        data-page-title="{{if gameType== 'recently-played'}}
+        Recently played
+        {{else gameType == 'all'}}
+        All Games
+        {{/if}}" data-page-navi="game">
+        
+	    {{if gameType== 'recently-played'}}
+	    <div data-widget="DataView2" data-on-scrolldata="games.openGamelist" data-game-type="${gameType}" data-user-id="${userId}" data-user-type="${userType}" data-page-size="10">
+        <ul class="gamelist"></ul>
+        </div>
+        {{else gameType == 'all'}}
+        <section data-widget="DataView2" data-on-scrolldata="games.openGamelist" data-game-type="${gameType}" data-user-id="${userId}" data-page-size="10">
+	      <ul> </ul>
+	   </section>
+        {{/if}}
+	</article>

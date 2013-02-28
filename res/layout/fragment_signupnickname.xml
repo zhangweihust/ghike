@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mSignUpNicknameView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:focusable="false"
+        android:orientation="vertical"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:id="@+id/signup_nickname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_yellow_header">
+
+            
+               <ImageView
+                android:id="@+id/NicknameImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/header_hike"
+                android:contentDescription="@string/playgame"/>
+            
+            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/NicknameView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:id="@+id/mSignUpNicknameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_marginLeft = "45dip"
+                android:text="@string/seton"              
+                android:layout_alignParentTop="true"
+                android:textColor="@color/darkgray"
+                android:layout_marginTop = "15dip"
+                android:textSize="15sp" />
+            
+             <TextView
+                android:id="@+id/mSignUpNicknameTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_toRightOf = "@+id/mSignUpNicknameTextView"
+                android:layout_marginLeft = "5dip"             
+                android:textColor="@color/orange"
+                android:layout_alignBottom = "@+id/mSignUpNicknameTextView"
+                android:textSize="15sp" />
+             
+               <TextView
+                android:id="@+id/mSignUpNicknameTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_centerHorizontal = "true"
+                android:layout_below = "@+id/mSignUpNicknameTextView"
+                android:layout_marginTop = "5dip"
+                android:text="@string/whatisyourname"              
+                android:textColor="@color/darkgray"            
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/mSignUpNicknameNicknameEditText"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_below = "@+id/mSignUpNicknameTextView2"
+                android:layout_marginTop = "8dip"
+                android:layout_marginLeft = "10dip"
+                android:layout_marginRight = "10dip"
+                android:hint = "@string/hint"
+                android:drawableLeft = "@drawable/login_nickname"
+                android:drawablePadding = "10dip"
+                android:paddingLeft="10dip"
+                android:maxLength="15"
+                android:background="@drawable/btn_shape_white_rec"
+                android:layout_centerInParent="true" 
+                android:textSize = "15sp"
+                android:textColor = "@color/gray"/>
+
+            <Button
+                android:id="@+id/mSignUpNicknameNextBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_below = "@+id/mSignUpNicknameNicknameEditText"
+                android:layout_marginTop = "12dip"
+                android:layout_marginLeft = "10dip"
+                android:layout_marginRight = "10dip"
+                android:contentDescription="@string/notice"
+                android:text="@string/letsplay" 
+                android:textSize = "15sp"
+                android:textColor = "@color/gray"
+                android:clickable="false"/>
+        </RelativeLayout>
+    </LinearLayout>

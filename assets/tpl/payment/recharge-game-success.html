@@ -1,0 +1,35 @@
+<article class="page payment rechargeSuccess" data-widget="WebPage" data-page-navi="profile"  data-animation="fade">
+		<div class="personal">
+			<img src="${user.headUrl}" />
+			<div class="personalInfo">
+				<div class="name">${nickName}</div>
+				<div class="level hint">${ac.hikeCoin} {{if ac.hikeCoin > 1}}Coins{{else}}Coin{{/if}}</div>
+			</div>
+			<div class="bk0"></div>
+		</div>
+	 	<section>
+	 	{{if status == 200}}
+		<div class="content info bk15">Congratulations!<br />Successful Recharged : <span class="hint">${pb.amount} {{if pb.amount > 1}}Coins{{else}}Coin{{/if}}</span></div>
+		{{if isContinueConsume }}
+		<div class="content info">
+			Item Name : ${coinName}<br />
+			Item Price : ${amount} {{if amount > 1}}Coins{{else}}Coin{{/if}}
+		</div>
+		{{/if}}
+		{{else}}
+		<div class="content info bk15">Sorry ${nickName}!<br /> Transaction has failed!</div>
+		{{/if}}
+		<div class="functions">
+			{{if isContinueConsume }}
+			<div class="bk15">
+				<input type="button" class="bluebtn full" data-action="payment.confirmAndConsume" data-widget="Button" data-transaction-id="${transactionId}"  data-is-native="${isNative}"  data-return-url="${returnUrl}"   data-jsp_token="${jspToken}"   value="Confirm to Buy"   />
+			</div>
+			{{/if}}
+			<div class="bk15">
+				<input type ="hidden" id="returnUrl" value="${returnUrl}" />
+				<input type="hidden"  value="${isNative}" id = "isNative" />
+				<input type="button" class="graybtn full"  onclick="consumebacktogame();" value="Back to Game" />
+			</div>
+		</div>
+	</section>
+</article>

@@ -1,0 +1,38 @@
+<article class="page forum forum-home"  data-widget="WebPage" data-animation="fade" data-page-title="Game Community" data-page-navi="forum" data-left-action="goBack">
+	<section class="opr">
+		<input name="tomycommunity" type="button" class="wbtn fullbtn" value="My Communities" data-widget="Button" data-action="forum.myforums" />
+	</section>
+	<section>
+		<div class="itemtitle">Hot  Forums <span class="link" data-action="forum.allforumlist">See All</span></div>
+		<div class="forums">
+		{{each(i, item) forums}}
+			<div class="forum" data-action="forum.toforum" data-forum-id="${item.forumId}">
+				<img class="avata" src="${URL_STATIC_IMG}/${item.gameIcon}" alt="" />
+				<div class="info">
+					<p>${item.gameTitle}</p>
+					<p>Topic: ${item.topicCount}</p>
+				</div>
+			</div>
+		{{/each}}
+		</div>
+	</section>
+	<section>
+		<div class="itemtitle">Hot Topics</div>
+		<ul class="postlist">
+		{{each(i, item) topics}}
+			<li data-action="topic.discusstion" data-topic-id="${item.topicId}">
+				<img class="avata" src="${item.creatorAvata}" alt="" />
+				<div class="detail">
+					<span class="name">${item.creatorNickname} / ${item.gameTitle}</span> : ${item.subject}
+				</div>
+				<div class="legend">
+					<span class="duration">${item.createTime}</span>
+					<span class="comments">${item.replyCount}</span>
+				</div>
+				
+			</li>
+		{{/each}}
+		</ul>
+	</section>
+	
+</article>

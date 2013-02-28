@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mWelcomeView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:focusable="false"
+        android:background="@color/welcome_background">
+        	<ImageView
+        	    android:id="@+id/login_welcome_image"
+        	    android:contentDescription="@null"
+        	    android:layout_width="fill_parent"
+        	    android:layout_height="wrap_content"
+        	    android:scaleType="centerCrop"
+        	    android:src="@drawable/login_welcome_bg"
+        	    android:layout_alignParentTop="true"/>
+            <Button
+                android:id="@+id/mWelcomeAcceptBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal= "true"
+                android:layout_alignParentBottom = "true"
+                android:contentDescription="@string/getcode"
+                android:layout_marginBottom = "64dp"
+                android:text="@string/accept"    
+                android:textSize = "18sp"
+                android:visibility = "visible"
+                android:textColor="@color/white"          
+                android:background="@drawable/login_welcome_bg_btn"
+                />
+            
+             
+              <Button
+                android:id="@+id/mWelcomeTermOfUseImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"  
+                android:layout_alignParentBottom = "true"        
+                android:layout_marginBottom = "28dp"
+                android:layout_centerHorizontal = "true"               
+                android:contentDescription="@string/termsofservice"
+                android:background="@drawable/termsofservice"
+                />
+
+        
+    </RelativeLayout>

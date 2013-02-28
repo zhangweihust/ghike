@@ -1,0 +1,20 @@
+<article class="page profile feedback" data-widget="WebPage" data-on-open ="topic.topicreply" data-page-title="Feedback"  data-page-navi="profile">
+	<div class="editsection">
+		<section class="emsection">
+			<div class="des">
+				It seems like you got a problem. Give us your feedback in order to solve your problems and help us improve BSB Product.
+			</div>
+			<select id="fbType" class="feedback_fbType">
+				<option value="0" selected="true">Platform problem</option>
+				{{each(i, game) list}}
+				<option value="${game.appId}">Gaming problem-${game.title}</option>
+				{{/each}}
+			</select>
+			<input type="text" placeholder="Issue" class="issue" maxlength="40" id="title"/>
+			<textarea placeholder="Report" class="contents report" maxlength="500" id="content"></textarea>
+            <span class="count"><em class="num">0</em> / <em class="maxnum">500</em> </span>
+            <p class="error"></p>
+		</section>
+		<input name="submit" type="button" value="Submit" class="fullbtn" data-action="profile.feedbackSubmit" data-widget="Button"/>
+	</div>
+</article>

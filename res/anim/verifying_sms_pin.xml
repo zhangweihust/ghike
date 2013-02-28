@@ -1,0 +1,15 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/smspin"    android:duration="100" />
+    <item android:drawable="@drawable/smspin_30" android:duration="100" />
+    <item android:drawable="@drawable/smspin_60" android:duration="100" />
+    <item android:drawable="@drawable/smspin_90" android:duration="100" />
+    <item android:drawable="@drawable/smspin_120" android:duration="100" />
+    <item android:drawable="@drawable/smspin_150" android:duration="100" />
+    <item android:drawable="@drawable/smspin_180" android:duration="100" />
+    <item android:drawable="@drawable/smspin_210" android:duration="100" />
+    <item android:drawable="@drawable/smspin_240" android:duration="100" />
+    <item android:drawable="@drawable/smspin_270" android:duration="100" />
+    <item android:drawable="@drawable/smspin_300" android:duration="100" />
+    <item android:drawable="@drawable/smspin_330" android:duration="100" />
+</animation-list>

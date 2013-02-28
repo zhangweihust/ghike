@@ -1,0 +1,21 @@
+<article class="page payment consume" data-widget="WebPage" data-page-navi="profile"  data-animation="fade">
+	<section>
+		<div class="content">
+			<header class="info">Congratulations ${user.nickName}! Transaction has been completed!</header>
+			<div class="consumebottom">
+				<nav><ul><li>Coin Cost</li><li>Item</li><li>Game name</li></ul></nav>
+				<ul class="consumelist">
+					<li><span>${consumeBill.amount} {{if consumeBill.amount>1}}coins{{else}}coin{{/if}}</span><span>${consumeBill.coinName}</span><span>${consumeBill.appName}</span></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<div class="bk">
+			<input type ="hidden" id="returnUrl" value="${returnUrl}" />
+			<input type="hidden"  value="${isNative}" id = "isNative" />
+				<input type="button" data-widget="Button"  onclick="backtogame1();" class="full bluebtn" value="Back to Game" />
+			</div>
+			<input type="button" data-widget="Button" data-action="payment.ConsumeDetails" class="bluebtn full" value="See all Records" />
+		</div>
+	</section>
+</article>

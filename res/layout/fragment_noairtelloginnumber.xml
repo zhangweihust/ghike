@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mSignUpNumberView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:focusable="false"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/signuptitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_yellow_header" >
+
+            <!-- tools:ignore="UselessParent" -->
+
+            <ImageView
+                android:id="@+id/HeaderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/header_hike"
+                android:contentDescription="@string/playgame"/>
+
+<!--             <ImageButton
+                android:id="@+id/mSignUpNumberHelpBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight = "true"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/login_ask"
+                android:visibility="gone"
+                android:contentDescription="@string/notice" /> -->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/signupView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:id="@+id/mSignUpNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text = "@string/cannotpull"
+                android:textColor="@color/darkgray"
+                android:layout_marginTop = "19dip"
+                android:layout_centerHorizontal = "true"
+                android:textSize="15dp"
+                 />
+            
+              <TextView
+                android:id="@+id/mSignUpNumberTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "@string/getstart"
+                android:textColor="@color/darkgray"
+                android:layout_below = "@+id/mSignUpNumberTextView"
+                android:layout_centerHorizontal = "true"
+                android:textSize="15dp"
+                 />
+
+            <EditText
+                android:id="@+id/mSignUpNumberNumberEditText"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft = "10dip"
+                android:layout_marginRight = "10dip"
+                android:layout_below = "@+id/mSignUpNumberTextView1"
+                android:hint = "@string/phonenumber" 
+                android:textSize="15dp"
+                android:textColor="@color/gray"
+                android:drawableLeft = "@drawable/login_in91"               
+                android:paddingLeft="10dip"
+                android:drawablePadding = "10dip"
+                android:maxLength="14"
+                android:background="@drawable/btn_shape_white_rec"
+                android:layout_marginTop = "15dip"/>
+
+
+            <Button
+                android:id="@+id/mSignUpNumberNextBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_below = "@+id/mSignUpNumberNumberEditText"
+                android:layout_marginLeft = "10dip"
+                android:layout_marginRight = "10dip"
+                android:layout_marginTop = "15dip"
+                android:contentDescription="@string/notice"
+                android:text="@string/next" 
+                android:textSize = "15sp"
+                android:textColor="@color/gray"
+                android:clickable="false"/>
+
+            <TextView
+                android:id="@+id/HeaderText3"
+                android:layout_width="wrap_content"
+                android:layout_height="24dip"
+                android:layout_alignParentBottom="true"
+                android:text="@string/verify"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>

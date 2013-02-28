@@ -1,0 +1,13 @@
+<article class="page home sign" data-widget="WebPage" data-page-title="Sign up" data-tool-class="ask-btn" data-tool-action="home.help">
+	<div class="wrapper">
+		<div class="emsection">
+			<h2>Your Airtel phone number is</h2>
+			<h1>{{if number}}${number}{{/if}}</h1>
+			<h2>Enter your nickname to Register this ID</h2>
+			<input class="text" type="text" name="nickname" maxlength="15" id="nickname" placeholder="Enter your nickname here"/>
+			<div class="numcnt"><em id="nicknameCounter">0</em>/15</div>
+			<p class="error"></p>
+		</div>
+		<input name="signUp" class="airtel" type="button" value="Sign up" data-widget="Button" id="doSignup" data-action="home.doSignupNickname" />
+	</div>
+</article>

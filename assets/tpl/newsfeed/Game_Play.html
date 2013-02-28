@@ -1,0 +1,39 @@
+<li data-newsfeed-id="newsfeed_${feed.data.id[0]}">
+	<h2><span class="name" data-action="games.openDetail" data-game-id="${feed.data.fGameId[0]}">${feed.data.fGameName[0]}</span><aside class="time" data-feed-time="${feed.data.time[0]}">${feed.data.timeStr[0]}</aside></h2>
+	<div class="content">
+		{{if feed.data.visitType[0] == "newsfeed" || feed.data.userID[0] != feed.data.fID[0]}}
+			{{if feed.data.fGameHeardUrl != undefined }}
+			<img data-action="games.openDetail" data-game-id="${feed.data.fGameId[0]}" class="avata game" src="${feed.data.fGameHeardUrl[0]}"/>
+			{{else}}
+			<img data-action="profile.friends" data-user-id="${feed.data.fID[0]}" class="avata" src="${feed.data.heardUrl[0]}"/>
+			{{/if}}
+		{{else}}
+			{{if feed.data.fGameHeardUrl != undefined }}
+			<img data-action="games.openDetail" data-game-id="${feed.data.fGameId[0]}" class="avata game" src="${feed.data.fGameHeardUrl[0]}"/>
+			{{else}}
+			<img class="avata" src="${feed.data.heardUrl[0]}"/>
+			{{/if}}
+		{{/if}}
+		<div class="detail playgame">
+			{{if feed.data.visitType[0] == "newsfeed" || feed.data.userID[0] != feed.data.fID[0]}}
+				<span class="name" data-action="profile.friends" data-user-id="${feed.data.fID[0]}">${feed.data.fName[0]}</span>
+			{{else}}
+				<span class="name">${feed.data.fName[0]}</span>
+			{{/if}}
+			{{if feed.data.fName.length > 1}}
+				{{if feed.data.fName.length < 3}} 
+					and <span class="name" data-action="profile.friends" data-user-id="${feed.data.fID[1]}">${feed.data.fName[1]}</span>
+				{{else}}
+					and <span class="name" data-action="home.n_others_detail" data-game-id="${feed.data.fGameId[0]}" data-game-name="${feed.data.fGameName[0]}" data-pids="{{each(index, f) feed.data.fID}}{{if index != 0}}${feed.data.fID[index]}{{if feed.data.fID.length != index+1}}_{{/if}}{{/if}}{{/each}}">${feed.data.fID.length-1} others</span>
+				{{/if}}
+			{{/if}}
+				{{if feed.data.fName.length < 2}} 
+				 	is 
+				{{else}}
+					are 
+				{{/if}}
+			 playing <span class="gamename" data-action="games.openDetail" data-game-id="${feed.data.fGameId[0]}">${feed.data.fGameName[0]}</span>.
+			 <aside class="play bluebtn" data-action="games.playFromNewsfeed" data-game-id="${feed.data.fGameId[0]}">Play</aside>
+		</div>
+	</div>
+</li>

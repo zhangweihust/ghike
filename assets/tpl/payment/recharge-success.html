@@ -1,0 +1,26 @@
+<article class="page payment rechargeSuccess" data-widget="WebPage" data-page-navi="profile"  data-animation="fade">
+		<div class="personal">
+			<img src="${user.headUrl}" />
+			<div class="personalInfo">
+				<div class="name">${nickName}</div>
+				<div class="level hint">${ac.hikeCoin} {{if ac.hikeCoin > 1}}Coins{{else}}Coin{{/if}}</div>
+			</div>
+			<div class="bk0"></div>
+		</div>
+	 	<section>
+	 	{{if status == 200}}
+		<div class="content info bk15">Congratulations ${nickName}!<br /> Transaction has been completed!</div>
+		<div class="content">
+			<nav><ul><li>Order NO.</li><li>Recharge time</li><li>Coins</li></ul></nav>
+			<ul class="consumelist">
+				<li><span>${pb.payBillId}</span><span>${time}</span><span>${pb.hikeCoin}</span></li>
+			</ul>
+		</div>
+		{{else}}
+		<div class="content info bk15">Sorry ${nickName}!<br /> Transaction has failed!</div>
+		{{/if}}
+		<div class="functions">
+			<div class="boxBtn"><input type="button" class="bluebtn" data-action="payment.paymentCenter" value="Recharge More" /><input type="button" class="bluebtn" data-action="payment.RechargeDetails" value="See all Records" /></div>
+		</div>
+	</section>
+</article>

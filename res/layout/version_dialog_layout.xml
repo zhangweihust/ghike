@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dip"
+    android:layout_height="wrap_content"
+    android:background="@drawable/linearlayout_shape_white" >
+
+    <TextView
+        android:id="@+id/titleView"
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/dialogheader"
+        android:paddingBottom="10dip"
+        android:paddingLeft="15dip"
+        android:paddingTop="10dip"
+        android:textColor="@color/whiteback"
+        android:textSize="16sp" />
+    <!-- android:layout_centerInParent="true" -->
+
+    <TextView
+        android:id="@+id/contentView"
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/titleView"
+        android:paddingBottom="10dip"
+        android:paddingLeft="15dip"
+        android:paddingTop="10dip"
+        android:textColor="@color/gray"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/loadanim_wrap"
+        android:layout_width="300dip"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/contentView"        
+        android:paddingBottom="10dip"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/loadanim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"            
+            android:background="@drawable/loader" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearLayoutId3"
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loadanim_wrap"
+        >
+
+        <View
+            android:id="@+id/partline"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"            
+            android:background="@color/splitegray"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearLayout_twobtn"
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayoutId3"  
+        android:paddingBottom="15dip"     
+        >
+
+        <Button
+            android:id="@+id/sureBtn"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="33dp"
+            android:layout_marginRight="15dp"  
+            android:layout_marginTop="15dp"                 
+            android:background="@drawable/surebtn_shape_white"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="33dp"
+            android:layout_marginTop="15dp"            
+            android:background="@drawable/cancelbtn_shape_white"
+            android:textColor="@color/gray"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearLayout_onebtn"
+        android:layout_width="300dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayoutId3"
+        android:paddingBottom="15dip"  
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/onlyBtn"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/surebtn_shape_white"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

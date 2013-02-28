@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="45dp"
+    android:layout_alignParentTop="true"
+    android:paddingTop="0.5dp"
+    android:background="@drawable/header_bg" >
+
+    <ImageView
+        android:id="@+id/toolbar_navigator_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:contentDescription="@string/notice" />
+
+    <TextView
+        android:id="@+id/toolbar_header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="42.5dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/toolbar_hike_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/header_hike"
+        android:contentDescription="@string/title_hike" />
+
+    <ImageView
+        android:id="@+id/toolbar_tool_button"
+        android:layout_width="42.5dp"
+        android:layout_height="42.5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="0dp"
+        android:contentDescription="@string/notice" />
+    
+    <zonesdk.in.android.games.in.widget.Tabs
+        android:id="@+id/toolbar_tabs"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+        
+    </zonesdk.in.android.games.in.widget.Tabs>
+
+    <TextView
+        android:id="@+id/topbar_notify_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="16dip"
+        android:background="@drawable/topbar_notify_tip"
+        android:layout_toLeftOf="@id/toolbar_tool_button"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="-10dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:visibility="gone"
+        android:paddingRight="3dp"
+        android:text="0"
+        android:textSize="8dp" />
+
+</RelativeLayout>

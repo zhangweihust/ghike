@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="45dp"
+    android:background="@drawable/header_bg"
+    android:focusable="false"
+    android:orientation="vertical"
+    tools:ignore="UselessParent" >
+
+    <ImageButton
+        android:id="@+id/ContentEditorLeftButton"
+        android:layout_width="35dp"
+        android:layout_height="32dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="3dp"
+        android:background="@drawable/nav_back"
+         />
+
+    <TextView
+        android:id="@+id/HeadContentEditorText"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:text="Post Status"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/ContentEditorRightButton"
+        android:layout_width="35dip"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/tool_invite"
+         />
+
+    <!--
+             <Button
+            android:id="@+id/notification"
+            android:layout_width="18dip"
+            android:layout_height="12dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dip"
+            android:layout_marginRight="55dip"
+            android:background="@drawable/notice"
+            android:paddingRight="6dip"
+            android:textSize="8dp"
+            android:visibility="gone" />
+    -->
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_newbie_mission">Newbie Mission</string>
+    <string name="nav_top_games">Top Games</string>
+    <string name="nav_my_games">My Games</string>
+    <string name="nav_timeline">Timeline</string>
+    <string name="nav_friends">Friends</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_about">About</string>
+</resources>

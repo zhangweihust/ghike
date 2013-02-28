@@ -1,0 +1,10 @@
+<li>
+	<div class="content">
+		<img data-action="profile.friends" data-user-id="${comment.owner}" class="avata" src="${comment.heardurl}"/>
+		<div class="detail"><span data-action="profile.friends" data-user-id="${comment.owner}" class="name">${comment.ownerName}</span> {{if comment.replyTargetId != null && comment.replyTargetId != ""}}to <span data-action="profile.friends" data-user-id="${comment.replyTargetOwner}" class="name">${comment.replyTargetOwnerName}{{/if}}</span> : <span data-widget="TimelineContent">{{if comment.actionContent != null && comment.actionContent != ""}}{{html comment.actionContent }}{{else}} {{html comment.content }}{{/if}}</span></div>
+	</div>
+	<div class="legend">
+		<aside class="time" data-feed-time="${comment.create_time}">${comment.createTimeStr}</aside>
+		<aside class="comment" data-action="home.toReply" data-subject-id="${comment.subjectId}" data-body-content="Reply to ${comment.ownerName}" data-subject-owner="${comment.subjectOwner}" data-reply-target-id="${comment.id}" data-reply-target-owner="${comment.owner}" data-subject-owner-name="${comment.ownerName}" data-comment-type="1"></aside>
+	</div>
+</li>

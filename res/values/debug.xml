@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <bool name="crashlog_open">true</bool>
+  <bool name="crashlog_dump">true</bool>
+  <bool name="crashlog_post">false</bool>
+</resources>

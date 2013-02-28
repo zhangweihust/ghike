@@ -1,0 +1,51 @@
+<article class="page notify detail" data-widget="WebPage" data-page-title="Competitions" data-page-navi="null">
+		<div class="detail-info">
+			<img alt="${fromUser.nickName}" src="${fromUserHeadUrl}" />
+			<div class="con">
+				<div class="inner">
+					<span class="name" data-widget="Button" data-action="profile.friends" data-user-id="${fromUser.id}">
+						${fromUser.nickName}
+					</span> is competing you to play &quot;
+					<span class="name" data-widget="Button" data-action="games.openDetail" data-game-id="${gameBasic.appId}">${gameBasic.title}</span>&quot;.
+				</div>
+			</div>
+		</div>
+		<textarea readonly>${content}</textarea>
+		<time>July 18 at 18:25</time>
+		<ul class="itemlist mutual-list">
+			<li>
+				${mutualFriendsCount} mutual friends 
+				<span class="names">
+					{{if mutualFriendsCount > 0}}
+						${mutualFrends[0].nickName} 
+					{{/if}}
+					{{if mutualFriendsCount > 1}}
+						<span class="spacer">/</span> 
+						${mutualFrends[1].nickName}
+					{{/if}}
+					{{if mutualFriendsCount > 2}}
+						<span class="spacer">/...</span> 
+					{{/if}}
+				</span>
+			</li>
+			<li>
+				${mutualGamesCount} mutual games 
+				<span class="names">
+					{{if mutualGamesCount > 0}}
+						${mutualGames[0].title}
+					{{/if}}
+					{{if mutualGamesCount > 1}}
+						<span class="spacer">/</span> ${mutualGames[1].title}
+					{{/if}}
+					{{if mutualGamesCount > 2}}
+						<span class="spacer">/...</span> 
+					{{/if}}
+				 </span>
+			</li>
+		</ul>
+		<div class="control">
+			<input name="accept" type="button" value="Accept" data-widget="Button" data-action="games.challenge" data-challenge-type='2' data-request-id="${fromUser.id}" data-request-score="${challengeRequest.senderScore}" data-game-id="${challengeRequest.gameId}" data-challenge-id="${challengeId}"/>
+			<input name="later" type="button" value="Later" data-widget="Button" data-action="notify.game"/>
+			<input name="reject" type="button" value="Reject" class="wbtn" data-widget="Button" data-action="challenge.request.reject" data-challenge-id="${challengeRequest.id}"/>
+		</div>
+</article>

@@ -1,0 +1,68 @@
+<article class="page social profile" data-widget="WebPage" data-animation="fade" data-page-title="Profile" data-auto-scroll="disabled" data-tool-class="edit-btn" data-tool-action="profile.toPostPage">
+			{{if userInfo.coverUrl}}
+			<header style="background-image:url(${userInfo.coverUrl})">
+			{{else}}
+			<header>
+			{{/if}}
+				<img class="avata" src="${headUrl}"/>
+				<span class="name">${nickname}</span>
+			</header>
+			{{if postStatus}}
+				<div class="poststatus other" data-widget="TimelineContent">{{html postDescription}}</div>
+			{{else}}
+				<div class="poststatus other blank"></div>
+			{{/if}}
+			<div class="opr invitefriend" >
+				{{if  relation=="NoPath" || relation=="Applied" || relation=="Apply" }}
+				<span class="bluebtn"  data-widget="Button"  data-action="friend.invite" data-user-id =${userInfo.id} data-nick-name =${userInfo.nickName} data-my-name ="${hostNickname}">Add Friend</span>
+				{{else relation=="Friend" }}
+				<span  class="disablebtn" data-widget="Button" ><img class="chaticon" src="file:///android_asset/img/social-profile-dischat.png" />Chat</span>
+				{{/if}}
+			</div>
+		<div class="info"> 
+				<div class="split"></div>
+				<div class="games" >
+				  {{each(indexother, item) recentlyPlayed}}
+				     {{if item.gameId==0}}
+				        <span class="avata" style="background-image:url(file:///android_asset/img/game_place_holder.png)"></span>
+				     {{else}}
+				        <span class="avata" style="background-image:url(${hike.domain.URL_STATIC_IMG}/${item.appIconCover.touchIcon})" data-widget="Button" data-action="games.openDetail" data-game-id="${item.gameId}"></span>
+				     {{/if}}
+				     
+				     {{if Number(indexother)==2}}
+				     <br/>
+				     {{/if}}
+		          {{/each}}
+					 {{if totalRecentlyPlayed== 0 || totalRecentlyPlayed==1 }}
+					<span class="cnt" data-widget="Button"  data-action="games.gamelist" data-game-type="recently-played" data-user-id="${userInfo.id}" data-user-type="${isMyProfile}"><em>${totalRecentlyPlayed}</em> game</span>
+					{{else}}
+					<span class="cnt" data-widget="Button"  data-action="games.gamelist" data-game-type="recently-played" data-user-id="${userInfo.id}" data-user-type="${isMyProfile}"><em>${totalRecentlyPlayed}</em> games</span>
+					{{/if}}
+
+				</div>
+				<div class="friends"  >
+				  {{each(m, item) friends}}
+				     {{if item.userId==0}}
+				      <span class="avata" style="background-image:url(file:///android_asset/img/person_place_holder.png)"></span>
+				    {{else}}
+				     <span class="avata" style="background-image:url(${item.headUrl})"data-widget="Button"  data-action="profile.friends"  data-user-id="${item.userId}"  data-push-histroy="true"></span>
+				    {{/if}}
+				     {{if Number(m)==2}}
+				     <br/>
+				     {{/if}}
+		          {{/each}}
+				  {{if friendNum== 0 || friendNum==1 }}
+					  <span class="cnt" data-widget="Button"   data-action="profile.OthersFriendsLink"  data-user-id="${userInfo.id}" data-is-mutual="N" ><em>${friendNum}</em> friend</span>
+			      {{else}}
+					  <span class="cnt" data-widget="Button"   data-action="profile.OthersFriendsLink"  data-user-id="${userInfo.id}" data-is-mutual="N" ><em>${friendNum}</em> friends</span>
+				  {{/if}}
+				</div>
+			</div>
+		   <section  data-tiltle = "News Feed" data-widget="DataView" data-widget-id="newsfeedlist" data-on-scrolldata="profile.getNewsfeeds" data-user-id="${userInfo.id}" data-user-type="${isMyProfile}">
+			  <ul class="timeline-list">
+			  	 	
+	          </ul>
+	 	    </section>
+
+</article>
+

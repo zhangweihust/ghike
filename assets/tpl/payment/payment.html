@@ -1,0 +1,36 @@
+<article class="page payment paymenthome" data-widget="WebPage" data-page-navi="profile"  data-animation="fade">
+		<div class="personal">
+			<img src="${user.headUrl}" />
+			<div class="personalInfo">
+				<div class="name">${user.nickName}</div>
+				<div class="level hint">${ac.hikeCoin} {{if ac.hikeCoin > 1}}Coins{{else}}Coin{{/if}}</div>
+			</div>
+			<div class="bk0"></div>
+		</div>
+	 	<section class="recharge">
+	 	<div class="content">
+			<!--  <div class="change bk15">*1 Coin = 1 Rupee</div>-->
+			<ul class="nostylelist">
+			  {{each(rr, coinRupee) coinRupeeList}}
+			<li><label><input type="radio" name="exchange" {{if rr==0}}checked{{/if}}  value="${coinRupee.rupeeAmount}:${coinRupee.coinAmount}" />${coinRupee.coinAmount} {{if coinRupee.coinAmount > 1}}Coins{{else}}Coin{{/if}}<span class="changed">=<em>${coinRupee.rupeeAmount}</em>{{if coinRupee.rupeeAmount > 1}}Rupees{{else}}Rupee{{/if}}</span></label></li>
+			{{/each}}
+			<!--
+				<li><label><input type="radio" name="exchange"  value="1" /> 1 Coin<span class="changed">=<em>10</em>Rupees</span></label></li>
+				<li><label><input type="radio" name="exchange"  value="3" checked /> 3 Coins<span class="changed">=<em>10</em>Rupees</span></label></li>
+				<li><label><input type="radio" name="exchange" value="10" /> 10 Coins<span class="changed">=<em>10</em>Rupees</span></label></li>
+			-->
+			</ul>
+		</div>
+		<div class="functions">
+			<div class="bk15 shadowtext">Payment method:</div>
+			<div class="bk15"><label><input type="radio" name="paymentMethod" checked />Carrier Billing</label></div>
+			<div class="bk"><input type="button" class="bluebtn full tokenInput" data-transaction-id="${transactionId}"  data-is-native="${isNative}"  data-return-url="${returnUrl}"  data-recharge-type="${rechargeType}" data-action="payment.goToRecharge" data-widget="Button" data-user-id=${user.id} data-user-name="${user.nickName}" data-user-phone="${user.mobileNum}" data-jsp_token="${jsp_token}"  data-need-pincode="${needpincode}" value="Go to Recharge" />
+			</div>
+			<ul>
+				<li data-action="payment.RechargeDetails">Recharge Records</li>
+				<li data-action="payment.ConsumeDetails">Consume Records</li>
+				<!-- <li>Hike Coins User Guide</li> -->
+			</ul>
+		</div>	
+	 	</section>
+</article>

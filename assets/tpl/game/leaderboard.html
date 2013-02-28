@@ -1,0 +1,14 @@
+<article class="page game leaderboard" data-page-title="tab" data-widget="WebPage" data-page-navi="game" data-auto-scroll="disabled">
+ <div data-widget="NativeTab" data-active-tab="0">
+     <section data-title="Leaderboard" data-widget="DataView2" data-on-scrolldata="games.getLeaderboardList" data-board-type="specific-leaderboard"
+     data-platform-type="${platformType}"  data-downloadurl ="${downloadUrl}" data-package-name ="${packageName}" data-game-title ="${gameTitle}"
+          data-game-id="${gameId}" data-last-rank="${lastRank}">
+			<ul class="friend-list"></ul>
+		</section>
+		<section data-title="Top Players" data-widget="DataView2" data-on-scrolldata="games.getLeaderboardList" data-board-type="specific-topplayers"
+     data-platform-type="${platformType}"  data-downloadurl ="${downloadUrl}" data-package-name ="${packageName}" data-game-title ="${gameTitle}"
+          data-game-id="${gameId}" data-last-rank="${lastRank}">
+			<ul class="friend-list"></ul>
+		</section>
+ </div>
+</article>

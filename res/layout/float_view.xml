@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/title_bg">
+
+    <zonesdk.in.android.games.in.widget.RoundImage
+        android:id="@+id/float_img"
+        android:layout_width="32dip"
+        android:layout_height="32dip"
+        android:layout_marginLeft="7.5dip"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="2.5dip"
+        android:layout_marginBottom="2.5dip"
+        android:src="@drawable/female"/>
+    
+    <TextView 
+        android:id="@+id/float_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/float_img"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="15dip"
+        android:textSize="12dip"
+        android:text="Tom Cat!"
+        />
+    
+    <Button
+        android:id="@+id/to_my_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dip"
+        android:background="@drawable/btn_pop_bg"
+        android:textColor="@android:color/white"
+        android:paddingLeft="20dip"
+        android:text="View All"
+        />
+
+</RelativeLayout>

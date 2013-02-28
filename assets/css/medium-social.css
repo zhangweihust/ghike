@@ -1,0 +1,134 @@
+/*add this part to every file*/
+/*add this part to every file*/
+.social.timeline h1.refresh { line-height: 48.75px; background: #f0f0f0; color: #999999; border-bottom: solid 1px #ccc; padding-left: 3.125%; position: relative; font-size: .92em; }
+.social.timeline h1.refresh span.lastLoadTime { font-family: Helvetica; }
+.social.timeline h1.refresh aside.refreshbtn { display: block; width: 48px; height: 48px; background: url(../img/social-timeline-refresh.png) no-repeat center center; background-size: 21px auto; position: absolute; top: 0px; right: 3.125%; }
+.social.timeline .playbtn { display: block; height: 48px; line-height: 48px; margin: 22.5px 4.7%; font-size: 1.08em; }
+.social.timeline .nothers-list li { height: 90px; position: relative; padding-left: 96px; padding-right: 18%; }
+.social.timeline .nothers-list li img.avata { width: 60px; height: 60px; -webkit-border-radius: 30px; -moz-border-radius: 30px; -ms-border-radius: 30px; -o-border-radius: 30px; border-radius: 30px; position: absolute; left: 4%; top: 15px; }
+.social.timeline .nothers-list li .info { display: -webkit-box; height: 100%; -webkit-box-orient: vertical; -webkit-box-pack: center; white-space: nowrap; }
+.social.timeline .nothers-list li .info span { display: block; overflow: hidden; text-overflow: ellipsis; line-height: 1.3; }
+.social.timeline .nothers-list li .info .name { font-size: 1.5em; font-weight: bold; }
+.social.timeline .nothers-list li .info .common { font-size: .92em; }
+.social.timeline .nothers-list li aside.btn { height: 39px; position: absolute; right: 4%; top: 27px; }
+.social.timeline .nothers-list li { height: 90px; position: relative; padding-left: 96px; padding-right: 18%; }
+.social.timeline .nothers-list li img.avata { width: 60px; height: 60px; -webkit-border-radius: 30px; -moz-border-radius: 30px; -ms-border-radius: 30px; -o-border-radius: 30px; border-radius: 30px; position: absolute; left: 4%; top: 15px; }
+.social.timeline .nothers-list li .info { display: -webkit-box; height: 100%; -webkit-box-orient: vertical; -webkit-box-pack: center; white-space: nowrap; }
+.social.timeline .nothers-list li .info span { display: block; overflow: hidden; text-overflow: ellipsis; line-height: 1.3; }
+.social.timeline .nothers-list li .info .name { font-size: 1.5em; font-weight: bold; }
+.social.timeline .nothers-list li .info .common { font-size: .92em; }
+.social.timeline .nothers-list li aside.btn { position: absolute; right: 4%; top: 27px; }
+.social.profile header { width: 100%; height: 210px; background-image: url(../img/social-profile-bg.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center; text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.75); position: relative; }
+.social.profile header .avata, .social.profile header .name, .social.profile header .curpos, .social.profile header .changeavata { display: block; position: absolute; }
+.social.profile header .avata { width: 120px; height: 120px; -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8); -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8); box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8); -webkit-border-radius: 60px; -moz-border-radius: 60px; -ms-border-radius: 60px; -o-border-radius: 60px; border-radius: 60px; top: 43.5px; left: 5%; }
+.social.profile header .name { font-family: Helvetica; font-size: 2em; color: white; top: 69px; left: 35%; white-space: nowrap; width: 300px; text-overflow: ellipsis; overflow: hidden; padding: 4.5px 0; text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.8); }
+.social.profile header .curpos { font-size: 1.08em; color: #e9e9e9; top: 117px; left: 35%; background: url(../img/social-profile-curpos.png) no-repeat left center; background-size: auto 21px; padding-left: 21px; padding-top: 3px; padding-bottom: 3px; }
+.social.profile header .tiprange { width: 69px; height: 69px; display: inline-block; position: absolute; bottom: 0px; right: 0px; }
+.social.profile header .tiprange .changeavata { width: 32.25px; height: 30px; background: url(../img/social-profile-changeavata.png) no-repeat center center; background-size: auto 20.25px; background-color: rgba(0, 0, 0, 0.2); bottom: 18px; right: 17.25px; -webkit-border-radius: 3.75px; -moz-border-radius: 3.75px; -ms-border-radius: 3.75px; -o-border-radius: 3.75px; border-radius: 3.75px; }
+.social.profile .poststatus { font-size: 1.17em; color: #4d4d4d; line-height: 30px; background: url(../img/social-profile-editstatus.png) no-repeat 3.125% 21px; background-size: auto 22.5px; padding: 15px 3.125% 15px 9%; min-height: 60px; }
+.social.profile .poststatus img { width: 24px; height: 24px; }
+.social.profile .poststatus.other { background: none; padding-left: 3.125%; }
+.social.profile .poststatus.blank { min-height: 0px; height: 15px; padding: 0px; }
+.social.profile .opr { text-align: center; margin: 0 auto; margin-bottom: 24px; }
+.social.profile .opr .greenbtn, .social.profile .opr .bluebtn, .social.profile .opr .disablebtn { height: 40.5px; line-height: 40.5px; }
+.social.profile .opr .greenbtn img, .social.profile .opr .bluebtn img, .social.profile .opr .disablebtn img { margin-right: 9px; vertical-align: middle; }
+.social.profile .opr .chaticon { height: 18.75px; margin-top: -5.25px; }
+.social.profile .opr .at { color: #2d8ed2; }
+.social.profile .info { height: 181.5px; border-top: solid 1px #ccc; border-bottom: solid 1px #ccc; background: #f7f7f7; position: relative; }
+.social.profile .info .friends span.avata { margin-left: 3px; margin-right: 0px; }
+.social.profile .info .split { width: 1px; background: #ccc; height: 181.5px; left: 49.65%; position: absolute; }
+.social.profile .info span.avata { width: 60px; height: 60px; background-size: cover; margin-right: 3px; margin-bottom: 3px; display: inline-block; }
+.social.profile .info .games, .social.profile .info .friends { position: absolute; height: 127.5px; top: 15px; }
+.social.profile .info .games .cnt, .social.profile .info .friends .cnt { display: block; text-align: center; color: #999999; }
+.social.profile .info .games .cnt em, .social.profile .info .friends .cnt em { font-size: 1.25em; }
+.social.profile .info .games { left: 4.7%; }
+.social.profile .info .friends { right: 4.7%; }
+
+/*---------------css for social friends by zhouting-------------*/
+.txtstyle, .social .friend-list li .wrapper .info .name, .social .friend-list li .wrapper .info .mutual, .social .friend-list li .wrapper .info .playfriendsname { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; color: #626262; }
+
+.mainbox, .social .error, .social .findbtn, .social .perinfo, .social.edit .settingbtn, .social.search .searchtxt { margin: 15px; position: relative; }
+
+.inputtxt, .social.search .searchtxt .searchbox, .social.search .searchtxt .searchbox .searchKeyword { background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), color-stop(0.3, white), to(white)); border: 1px solid #999999; color: #999999; }
+
+input[type="text"] { -webkit-appearance: none; background-clip: padding-box; -webkit-background-clip: padding-box; text-align: -webkit-auto; }
+
+.social .bluebtn, .social .bluebtn { text-align: center; }
+.social .graybtn, .social .graybtn { text-align: center; }
+.social .subtitle { padding: 0px 4.6%; height: 47.25px; line-height: 47.25px; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.03)), color-stop(100%, rgba(0, 0, 0, 0.03))); background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.03)); background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.03)); background-image: -o-linear-gradient(rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.03)); background-image: linear-gradient(rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.03)); color: #b8b8b8; font-size: 1.167em; border-top: 1px solid rgba(204, 204, 204, 0.6); border-bottom: 1px solid #cccccc; }
+.social .subtitle span { margin-left: 4%; }
+.social .subtitle .selectbox { display: inline-block; top: 6.75px; }
+.social .error { font-size: 1.08em; color: #ff0000; font-family: Helvetica; background-color: #ffeeee; border: 1px solid #ff9999; height: 54px; line-height: 54px; padding-left: 7.5px; display: none; }
+.social .findbtn .bluebtn, .social .findbtn .bluebtn { position: absolute; right: 0px; top: 0px; }
+.social .findbtn .graybtn:active, .social .findbtn .graybtn:active { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f0f0f0)); background-image: -webkit-linear-gradient(#ffffff, #f0f0f0); background-image: -moz-linear-gradient(#ffffff, #f0f0f0); background-image: -o-linear-gradient(#ffffff, #f0f0f0); background-image: linear-gradient(#ffffff, #f0f0f0); }
+.social .findbtn .find { height: 48px; line-height: 48.75px; font-size: 1.08em; width: 210px; font-family: Helvetica; }
+.social .friend-list li { padding: 15px 4.6%; position: relative; height: 90px; }
+.social .friend-list li .btninvite { position: absolute; right: 0px; top: 0px; min-width: 108px; height: 100%; text-align: right; padding: 24px 21px 0px 0px; }
+.social .friend-list li .gameinvite { position: absolute; right: 0px; top: 0px; min-width: 108px; height: 100%; text-align: right; padding: 9px 0px 0px 0px; }
+.social .friend-list li .wrapper { width: 100%; position: relative; }
+.social .friend-list li .wrapper .selectbox { position: absolute; left: 0; top: 18px; }
+.social .friend-list li .wrapper img { position: absolute; width: 61.5px; height: 62.25px; border-radius: 37.5px; }
+.social .friend-list li .wrapper .info { margin-left: 17%; width: 81%; height: 62.25px; }
+.social .friend-list li .wrapper .info .name { padding: 6px 0px; width: 80%; font-size: 1.5em; font-weight: bold; }
+.social .friend-list li .wrapper .info .name .hint { color: red; font-size: 1em; }
+.social .friend-list li .wrapper .info .name b { background-color: #ffe0d6; font-size: 1em; }
+.social .friend-list li .wrapper .info .mutual { width: 80%; font-size: 0.95em; line-height: 1.5; height: 24px; }
+.social .friend-list li .wrapper .info .playfriendsname { line-height: 62.25px; font-size: 1.5em; font-weight: bold; }
+.social .friend-list li .wrapper .control, .social .friend-list li .wrapper .addfriends { width: 69.75px; height: 100%; position: absolute; right: 0px; top: 0px; background-image: url(../img/friends_control.png); background-size: 45px auto; background-repeat: no-repeat; background-position: right 8.25px; }
+.social .friend-list li .wrapper .addfriends { background-image: url(../img/social-friends-bg-add.png); background-repeat: no-repeat; background-size: auto 24px; background-position: right 17.25px; }
+.social .friend-list li .wrapper .addfriends.addfriends:active { background-image: url(../img/social-friends-bg-addactive.png); }
+.social .friend-list li .invite-list img { left: 10%; border-radius: 37.5px; }
+.social .friend-list li .invite-list .info { margin-left: 28%; width: 75%; }
+.social .friend-list li .invite-list .info .name { font-size: 1.25em; }
+.social .perinfo { color: #626262; font-size: 1.25em; line-height: 28.5px; }
+.social .perinfo .edite { text-decoration: underline; }
+.social.edit .payment .content .nostylelist .changed { display: inline; color: #F26D47; margin-left: 15px; }
+.social.edit .payment .content .nostylelist .changed em { color: #F26D47; margin: 0 7.5px; }
+.social.edit .content .nostylelist .changed { display: inline; color: #F26D47; margin-left: 15px; }
+.social.edit .content .nostylelist .changed em { color: #F26D47; margin: 0 7.5px; }
+.social.edit .settingbtn .save { display: block; height: 48px; line-height: 48px; margin-bottom: 4%; cursor: pointer; }
+.social.edit .edit-list { margin: 0 4%; }
+.social.edit .edit-list li { padding-top: 4%; cursor: pointer; }
+.social.edit .edit-list li .editname { font-family: Helvetica; font-size: 0.833em; color: #999999; text-transform: uppercase; margin-bottom: 15px; }
+.social.edit .edit-list li .editname span { color: #da451d; padding-left: 3.75px; vertical-align: top; display: inline-block; }
+.social.edit .edit-list li:active, .social.edit .edit-list li.active { border-bottom: 1px solid #da451d; }
+.social.edit .edit-list li:active .editname, .social.edit .edit-list li.active .editname { color: #da451d; }
+.social.edit .edit-list li .fullname { font-size: 1.667em; color: #666666; height: 52.5px; line-height: 52.5px; }
+.social.edit .edit-list li .fullname .edittext { line-height: 42px; width: 100%; }
+.social.edit .edit-list li .fullname .personalinfo_month, .social.edit .edit-list li .fullname .personalinfo_day, .social.edit .edit-list li .fullname .personalinfo_year { width: 75px; font-size: 1em; text-align: center; border: none; }
+.social.edit .edit-list li .fullname .personalinfo_year { width: 90px; }
+.social.edit .edit-list li .fullname .edittext { font-size: 1em; border: none; }
+.social.edit .edit-list li .fullname label { margin-right: 37.5px; font-size: 1em; color: #666666; vertical-align: top; }
+.social.edit .edit-list li .fullname label input { display: inline-block; margin-right: 15px; }
+.social.search .friend-list { border-top: 1px solid #CCCCCC; }
+.social.search .subtitle { height: 53.25px; line-height: 53.25px; cursor: pointer; }
+.social.search .searchtxt .error { margin: 0px; }
+.social.search .searchtxt .searchbox { width: 100%; height: 55.5px; position: relative; }
+.social.search .searchtxt .searchbox .searchKeyword { width: 88%; height: 52.5px; display: inline-block; vertical-align: middle; font-size: 1.25em; color: font-light; font-family: Helvetica; padding-left: 18px; border: none; margin-top: 1px; border-bottom: solid 1px #999; }
+.social.search .searchtxt .searchbox input[type=button] { width: 55.5px; height: 55.5px; display: inline-block; vertical-align: middle; background: none; border: none; cursor: pointer; background-image: url(../img/social-searchbtn-bg.png); background-size: auto 55.5px; position: absolute; top: -1px; right: -1px; }
+.social.search .searchtxt .showresult, .social.search .searchtxt .error { margin-top: 15px; color: red; font-size: 1.25em; }
+.social.search .searchtxt .showresult .number, .social.search .searchtxt .error .number { color: red; margin-right: 7.5px; font-size: 1em; }
+.social.search .searchtxt .showresult .fontcolor, .social.search .searchtxt .error .fontcolor { color: #666666; font-size: 1em; }
+.social.search .split { position: relative; border-bottom: none; font-family: Helvetica; -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4), 0px 1px 2px rgba(255, 255, 255, 0.4) inset; -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4), 0px 1px 2px rgba(255, 255, 255, 0.4) inset; box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4), 0px 1px 2px rgba(255, 255, 255, 0.4) inset; }
+.social.search .split .arrow { display: inline-block; width: 17.25px; height: 100%; position: absolute; right: 4%; top: 0px; background-image: url(../img/social-search-arrow.png); background-repeat: no-repeat; background-position: right center; background-size: auto 17.25px; }
+.social.terms .content { margin-top: 22.5px; padding: 0 11.25px; font-family: Edmondsans; font-size: 1.25em; color: #666666; }
+.social.terms .content h1 { font-size: 1.5em; margin-bottom: 15px; }
+.social.terms .content .textcontent { line-height: 1.5; }
+.social.terms .content .textcontent h2 { margin: 7.5px 0; text-decoration: underline; }
+.social.terms .content .textcontent .graph { margin-bottom: 15px; }
+.social.terms .content .textcontent .textnomal { padding-left: 22.5px; }
+.social.terms .content .textcontent .textnomal .number { display: inline-block; vertical-align: top; width: 10%; }
+.social.terms .content .textcontent .textnomal .afternum { display: inline-block; text-align: left; width: 83%; }
+.social.terms .content .textcontent .title { margin-bottom: 7.5px; text-indent: 9px; }
+.social.terms .content .textcontent .textbranch { text-indent: 18px; margin-bottom: 15px; }
+.social.about { background-color: #f1f1f1; }
+.social.about .about-tit { margin: 0 auto; margin-top: 62.25px; margin-bottom: 31.5px; background-image: url(../img/aboutzone.png); background-size: 136.5px auto; background-position: center center; width: 136.5px; height: 36.75px; }
+.social.about .about-text { text-align: center; font-size: 1.25em; padding: 6px 0; margin-bottom: 45.75px; }
+.social.about .version { margin: 0 50.25px; }
+.social.about .version .versionbox { border: 1px solid #bbbbbb; -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15); box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15); margin-bottom: 7.5px; background-color: #FFFFFF; }
+.social.about .version .versionbox .versioninfo { padding: 28.5px 30px; position: relative; font-size: 1.17em; }
+.social.about .version .versionbox .versioninfo .arrowright { position: absolute; right: 30px; top: 28.5px; background-image: url(../img/notify-list-arrow.png); background-size: auto 16.5px; width: 10.5px; height: 16.5px; }
+.social.about .version .versionbox p:first-child { border-bottom: 1px solid #bbbbbb; }
+.social.about .footer { margin-top: 174.75px; text-align: center; }
+.social.about .footer p { line-height: 2.0em; color: #999999; font-family: Helvetica; }
+.social.about .footer p:last-child { margin-bottom: 41.25px; }

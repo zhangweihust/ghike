@@ -1,0 +1,62 @@
+<article class="page game game-featured" data-widget="WebPage" data-page-navi="home" data-navigator="menu" data-page-title="tab">
+	<div data-widget="NativeTab" data-active-tab="${tabIndex}">
+		<section data-title="Featured">
+			<section>
+				<div class="image_slider" data-widget="ImageSlider">
+				{{each(i, featuredGame) featureGameList}}
+					<img data-action="games.openDetail" width="100px" height="100px" data-game-id='${featuredGame.appId}' data-game-name="${featuredGame.title}" src="${URL_STATIC_IMG}/${featuredGame.appIconCover.touchMediumCover}" />
+				{{/each}}
+				</div>
+			</section>
+			<section>
+				<h1>Top Games</h1>
+			<div class="imagebarwrapper" data-widget="ImageBar">
+				<ul class="image_bar">
+				{{each(ipps, topGame) topGamesList}}
+				{{if ipps < 12}}
+					{{if topGame}}
+						<li><div class="avata" data-action="games.openDetail" data-game-id="${topGame.appId}" style="background-image:url(${URL_STATIC_IMG}/${topGame.appIconCover.touchIcon})"></div><span>${topGame.title}</span></li>
+					{{/if}}
+				{{/if}}
+				{{/each}}
+				</ul>
+			</div>
+			</section>
+			<section>
+				<h1>Featured Game</h1>
+				<div class="imagebarwrapper" data-widget="ImageBar">
+				{{if friendPlayedList.length > 3}}
+					<ul class="image_bar">
+					{{each(itemp, friendPlayed) friendPlayedList}}
+					{{if itemp < 12}}
+						{{if friendPlayed}}
+							<li><div class="avata" data-action="games.openDetail" data-game-id="${friendPlayed.appId}" style="background-image:url(${URL_STATIC_IMG}/${friendPlayed.appIconCover.touchIcon})"></div><span>${friendPlayed.title}</span></li>
+				        {{/if}}
+			        {{/if}}
+					{{/each}}
+					</ul>
+				{{else}}
+				    <ul class="image_bar">
+					{{each(itemp, defGames) defGamesList}}
+					{{if defGames}}
+						<li><div class="avata" data-action="games.openDetail" data-game-id="${defGames.appId}" style="background-image:url(${URL_STATIC_IMG}/${defGames.appIconCover.touchIcon})"></div><span>${defGames.title}</span></li>
+			        {{/if}}
+					{{/each}}
+					</ul>
+				{{/if}}
+				</div>
+			</section>
+			<section>
+				<div class="arrow_btn" data-widget="Button" data-action="games.gamelist" data-game-type="all"><span>View all games</span></div>
+			</section>
+		</section>
+		<section data-title="New" data-widget="DataView" data-on-scrolldata="games.openGamelist" data-game-type="new">
+			<ul class="featuredgame-list">
+			</ul>
+		</section>
+		<section data-title="Popular" data-widget="DataView" data-on-scrolldata="games.openGamelist" data-game-type="popular">
+			<ul class="featuredgame-list">
+			</ul>
+		</section>
+	</div>
+</article>

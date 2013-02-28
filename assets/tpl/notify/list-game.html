@@ -1,0 +1,22 @@
+<article class="page notify list" data-widget="WebPage" data-page-title="Notification" data-page-navi="null" data-auto-scroll="disabled">
+	<div data-widget="TabGroup" class="tabgrp" data-active-tab="0" data-widget-id="gameNotify">
+		<section data-title="Competitions<em>(${challengeRequestCount})</em>">
+			<div data-widget="DataView" data-on-scrolldata="notify.game.requests">
+				<ul class="notify-list competition">
+				</ul>
+			</div>
+		</section>
+		<section data-title="Invitations<em>(${gameInvitationCount})</em>">
+			<div data-widget="DataView" data-on-scrolldata="notify.game.invites">
+				<ul class="notify-list invitation">
+				</ul>
+			</div>
+		</section>
+		<section data-title="Results<em>(${challengeResultCount})</em>">
+			<div data-widget="DataView" data-on-scrolldata="notify.game.results">
+				<ul class="notify-list results">
+				</ul>
+			</div>
+		</section>
+	</div>
+</article>

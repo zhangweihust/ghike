@@ -1,0 +1,16 @@
+<article class="page forum forum-addtopic" data-on-open ="topic.topicreply" data-maxlength="140" data-widget="WebPage" data-animation="fade" data-page-title="Reply" data-page-navi="forum" data-left-action="goBack" data-tool-class="send-btn" data-tool-action="home.reply">
+ 	<input class="commentType" type ="hidden" value="${commentType}" />
+ 	<input class="subjectId" type ="hidden" value="${subjectId}" />
+ 	<input class="subjectOwner" type ="hidden" value="${subjectOwner}" />
+ 	<input class="subjectOwnerName" type ="hidden" value="${subjectOwnerName}" />
+ 	<input class="replyTargetId" type ="hidden" value="${replyTargetId}" />
+ 	<input class="replyTargetOwner" type ="hidden" value="${replyTargetOwner}" />
+	<section class="addtopic-form">
+		<textarea class="contents commentDesc" name="commentDesc" maxlength="140" cols="" rows="" autofocus="autofocus">${bodyContent}</textarea>
+	</section>
+	<section class="addtopic-face" data-widget="AddFace">
+		<aside class="send-face"></aside>
+		<aside class="toshare" data-action="home.at" data-subject-id="${subjectId}" data-subject-owner="${subjectOwner}" data-subject-owner-name="${subjectOwnerName}" data-body-content="${bodyContent}" data-reply-target-id="${replyTargetId}" data-reply-target-owner="${replyTargetOwner}" data-url="home/newsfeed-reply"></aside>
+		<span class="count"><em class="num">0</em> / <em class="maxnum">140</em> </span>
+	</section>
+</article>

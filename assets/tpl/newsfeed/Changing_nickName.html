@@ -1,0 +1,41 @@
+{{if feed.data.visitType[0] == "detail"}}
+<li data-newsfeed-id="newsfeed_${feed.data.id[0]}">
+<div class="arrow"></div>
+<h1><img data-action="profile.friends" data-user-id="${feed.data.fID[0]}" class="avata" src="${feed.data.heardUrl[0]}"/><span class="name" data-action="profile.friends" data-user-id="${feed.data.fID[0]}">${feed.data.fName[0]}</span><aside class="time" data-feed-time="${feed.data.time[0]}">${feed.data.timeStr[0]}</aside></h1>
+{{else}}
+<li class="withdetail" data-widget="Button" data-newsfeed-id="newsfeed_${feed.data.id[0]}" data-action="home.activities" data-subject-id="${feed.data.id[0]}" data-subject-Owner="${feed.data.fID[0]}" data-subject-owner="${feed.data.fID[0]}" data-subject-owner-name="${feed.data.fName[0]}" data-body-content="Reply to ${feed.data.fName[0]}" data-comment-type="1">
+	<h2>
+	{{if feed.data.visitType[0] == "newsfeed" || feed.data.userID[0] != feed.data.fID[0]}}
+	<span class="name" data-action="profile.friends" data-user-id="${feed.data.fID[0]}">${feed.data.fName[0]}</span>
+	{{else}}
+	<span class="name">${feed.data.fName[0]}</span>
+	{{/if}}
+	<aside class="time" data-feed-time="${feed.data.time[0]}">${feed.data.timeStr[0]}</aside></h2>
+{{/if}}
+	<div class="content">
+		{{if feed.data.visitType[0] != "detail"}}
+			{{if feed.data.visitType[0] == "newsfeed" || feed.data.userID[0] != feed.data.fID[0]}}
+				<img data-action="profile.friends" data-user-id="${feed.data.fID[0]}" class="avata" src="${feed.data.heardUrl[0]}"/>
+			{{else}}
+				<img class="avata" src="${feed.data.heardUrl[0]}"/>
+			{{/if}}
+		{{/if}}
+		{{if feed.data.visitType[0] == "detail"}}
+		<div class="detail">
+			<span class="name" data-action="profile.friends" data-user-id="${feed.data.fID[0]}">${feed.data.fName[0]}</span> changed nick name to <span class="name" data-action="profile.friends" data-user-id="${feed.data.fID[0]}">${feed.data.fNewName[0]}</span>.
+		</div>
+		{{else}}
+		<div class="detail">
+			<span class="name">${feed.data.fName[0]}</span> changed nick name to <span class="name">${feed.data.fNewName[0]}</span>.
+		</div>
+		{{/if}}
+	</div>
+	<div class="legend">
+		<aside class="share" data-widget="Button" data-action="home.toShare" data-body-content="From ${feed.data.fName[0]}" data-subject-owner="${feed.data.fID[0]}" data-subject-id="${feed.data.id[0]}" data-subject-owner-name="${feed.data.fName[0]}" data-comment-type="1">
+		<span>${feed.data.shareCount[0]}</span>
+		</aside>
+		<aside class="comment" data-widget="Button" data-action="home.activities" data-subject-id="${feed.data.id[0]}" data-subject-Owner="${feed.data.fID[0]}" data-subject-owner="${feed.data.fID[0]}" data-subject-owner-name="${feed.data.fName[0]}" data-body-content="Reply to ${feed.data.fName[0]}" data-comment-type="1">
+		<span>${feed.data.commentsTotal[0]}</span>
+		</aside>
+	</div>
+</li>

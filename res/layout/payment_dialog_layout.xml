@@ -1,0 +1,307 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+    
+    <!-- 
+    android:background="@drawable/linearlayout_shape_white" 
+     -->
+
+    <TextView
+        android:id="@+id/titleView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/paymenttitle"
+        android:textColor="@color/paymenttitle"
+        android:textSize="17sp"
+        tools:context=".DialogActivity" />
+
+    <RelativeLayout
+        android:id="@+id/linearLayoutHikeName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleView"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/hikeNameId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:text="@string/nikename"
+            android:textColor="@color/paymenlist"
+            android:textSize="15dp"
+            tools:context=".DialogActivity" />
+
+        <TextView
+            android:id="@+id/hikeNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/paymenlistid"
+            android:textSize="15dp"
+            tools:context=".DialogActivity" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearLayoutMobileNumber"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayoutHikeName"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/mobileNumberId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:text="@string/mobileNumber"
+            android:textColor="@color/paymenlist"
+            android:textSize="15dp"
+            tools:context=".DialogActivity" />
+
+        <TextView
+            android:id="@+id/mobileNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/paymenlistid"
+            android:textSize="15dp"
+            tools:context=".DialogActivity" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearLayoutRechargeCount"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayoutMobileNumber"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/RechargeCountId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:text="@string/rechargeAcount"
+            android:textColor="@color/paymenlist"
+            android:textSize="15dp"
+            tools:context=".DialogActivity" />
+
+        <TextView
+            android:id="@+id/RechargeCountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/RechargeCountCoinsText"
+            android:textColor="@color/paymenlistid"
+            android:textSize="15dp"
+            tools:context=".DialogActivity" />
+       <TextView
+            android:id="@+id/RechargeCountCoinsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/paymenlistid"
+            android:textSize="15dp"
+            tools:context=".DialogActivity" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearLayoutPayment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayoutRechargeCount"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/actualPaymentId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:text="@string/actualPayment"
+            android:textColor="@color/paymenlist"
+            android:textSize="15dp"
+            tools:context=".DialogActivity" />
+
+        <TextView
+            android:id="@+id/actualPaymentText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/actualPaymentRupeesText"
+            android:textColor="@color/paymenlistid"
+            android:textSize="15dp"
+            tools:context=".DialogActivity" />
+        
+         <TextView
+            android:id="@+id/actualPaymentRupeesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/paymenlistid"
+            android:textSize="15dp"
+            tools:context=".DialogActivity" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearLayoutPaymentMethod"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayoutPayment"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/PaymentMethodId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:text="@string/paymentMethod"
+            android:textColor="@color/paymenlist"
+            android:textSize="15dp"
+            tools:context=".DialogActivity" />
+
+        <TextView
+            android:id="@+id/PaymentMethodText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="@string/paymenttext"
+            android:textColor="@color/paymenlistid"
+            android:textSize="15dp"
+            tools:context=".DialogActivity" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/linearLayoutPaymentOrderId"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayoutPaymentMethod"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/PaymentOrderId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:text="@string/paymentOrderId"
+            android:textColor="@color/paymenlist"
+            android:textSize="15dp"
+            tools:context=".DialogActivity" />
+
+        <TextView
+            android:id="@+id/PaymentOrderIdText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/paymenlistid"
+            android:textSize="15dp"
+            tools:context=".DialogActivity" />
+    </RelativeLayout>
+
+
+<!--     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/linearLayoutPaymentMethod"
+        android:layout_toRightOf="@+id/paymentPincodeText"
+        android:background="@drawable/btn_shape_white_rec"
+        tools:ignore="UselessLeaf" >
+
+        <Button
+            android:id="@+id/paymentGetCodeBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/paymentbtn"
+            android:text="@string/getcode"
+            android:textColor="@color/paymentBtn"
+            android:textSize="12dp" />
+    </LinearLayout> -->
+    <RelativeLayout
+        android:id="@+id/linearLayoutUserMethod"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayoutPaymentOrderId"
+        android:layout_marginTop="10dp" >
+        
+    <EditText
+        android:layout_below="@+id/linearLayoutPaymentMethod"
+        android:id="@+id/paymentPincodeText"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/pincode"
+        android:inputType = "textPassword"
+        android:background="@drawable/btn_shape_white_rec"
+        android:textSize="10sp" />
+        
+    <Button
+        android:id="@+id/pincodeErrorText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/paymentPincodeText"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/cancelbtn_shape_white"
+        android:gravity="left"
+        android:visibility="gone"
+        android:textColor="@color/pincode"
+        android:textSize="12sp"
+        tools:context=".DialogActivity"
+         />
+
+    <Button
+        android:id="@+id/paymentSureBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/pincodeErrorText"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/paymentbtn"
+        android:text="@string/gotorecharge"
+        android:textColor="@color/white" 
+        android:textSize="15sp"/>
+
+    <Button
+        android:id="@+id/paymentCancelBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/paymentSureBtn"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/paymentcancel"
+        android:text="@string/cancel"
+        android:textColor="@color/paymenlist"
+        android:textSize="15sp" />
+    </RelativeLayout>
+
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/linearLayoutUserMethod"
+        tools:ignore="UselessLeaf" >
+    </LinearLayout>
+
+</RelativeLayout>

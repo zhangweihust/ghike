@@ -1,0 +1,12 @@
+<article class="page notify detail" data-widget="WebPage" data-page-title="Recharge">
+	<p>
+		Congratulations ${paymentModel.nickName}!<br/>
+		Transaction has been completed!
+	</p>
+	<p>
+		Name: ${paymentModel.nickName}<br/>
+		Coins: ${paymentModel.coins}<br/>
+		Actual Pay: ${paymentModel.actualPay} {{if paymentModel.actualPay == 1}}Rupee{{else}}Rupees{{/if}}
+	</p>
+	<div class="time">${paymentModel.rechargeTime}</div>
+</article>

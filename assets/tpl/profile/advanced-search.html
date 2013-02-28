@@ -1,0 +1,25 @@
+<article class="page profile advanced-search" data-widget="WebPage" data-page-title="Advanced search" data-page-navi="null">
+	<div class="editsection">
+		<section class="emsection editsection">
+			<p>Nickname <em>*</em></p>
+			<input type="text" name="nickName" id="nickName" value=""/>
+			<p>First Name</p>
+			<input type="text" name="firstName" id="firstName" value=""/>
+			<p>Last Name</p>
+			<input type="text" name="lastName" id="lastName" value=""/>
+			<p>Gender
+				<input type="radio" name="gender" id="male" value="0"/>
+				<label>Male</label>
+				<input type="radio" name="gender" id="female" value="1"  checked="checked"/>
+				<label>Female</label>
+			</p>
+			<p class="age"><span>Age</span><span>From</span>
+				<input type="text" name="ageFrom" id="ageFrom" value="0"/>
+				<span class="center">To</span>
+				<input type="text" name="ageTo" id="ageTo" value="100"/>
+			</p>
+			<p class="error advancedMsg"></P>
+		</section>
+		<input name="search" type="button" value="Search" data-action="profile.advanced-search" class="fullbtn" data-widget="Button" data-push-histroy="false"/>
+	</div>
+</article>

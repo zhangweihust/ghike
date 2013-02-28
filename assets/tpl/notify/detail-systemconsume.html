@@ -1,0 +1,12 @@
+<article class="page notify detail" data-widget="WebPage" data-page-title="Consume">
+	<p>
+		Congratulations ${paymentModel.nickName}!<br/>
+		Transaction has been completed! 
+	</p>
+	<p>
+		Coins Cost:   ${paymentModel.coinCost} {{if paymentModel.coinCost == 1}}coin{{else}}coins{{/if}}<br/>
+		Item:   ${paymentModel.item}<br/>
+		Game name:   ${paymentModel.gameName}
+	</p>
+	<div class="time">${paymentModel.chargeTime}</div>
+</article>

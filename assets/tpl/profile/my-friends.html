@@ -1,0 +1,17 @@
+<article class="page social friends" data-page-title="tab" data-widget="WebPage" data-tool="search">
+	<div data-widget="NativeTab" data-active-tab="0">
+	<section data-title="My Friends" data-widget="DataView2" data-on-scrolldata="profile.getOthersFriends" data-user-id="${userInfo.id}"  >
+		<ul class="friend-list">
+		</ul>
+	 </section>
+	 <section data-title="Add Friends" data-widget="DataView2" data-on-scrolldata="friend.peopleyouMayknow"  >
+	    <div class="findbtn">
+	         <a href="javascript:void(0)" class="bluebtn find" data-widget="Button" data-action="profile.contact" > Invite Contacts</a>
+	         <span class="graybtn find" >Find from Facebook</span>   
+         </div>    
+	    <div class="subtitle">Suggested Friends:</div>
+		<ul class="friend-list">
+		</ul>
+	 </section>
+	</div>
+</article>     
